@@ -14,7 +14,6 @@ out
 *.ipr
 *.iws
 jshint-output.html
-/platforms/android/assets/www/*
-/platforms/ios/www/*
+platforms/
 jsconfig.json
 设计稿/
