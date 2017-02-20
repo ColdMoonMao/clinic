@@ -12140,8 +12140,45 @@ a.button {
   .appAdd .button {
     color: #12acef; }
 
-.dateSelect div table {
-  border: 1px solid blue; }
+.dateSelect div {
+  padding: 0px;
+  text-align: center; }
+  .dateSelect div table {
+    width: 100%; }
+    .dateSelect div table thead tr {
+      padding: 0px; }
+      .dateSelect div table thead tr td {
+        border: 1px solid gray;
+        width: 13%; }
+    .dateSelect div table tbody {
+      color: #0c60ee; }
+      .dateSelect div table tbody tr {
+        margin-top: 0px !important;
+        padding: 0px; }
+        .dateSelect div table tbody tr td {
+          border: 1px solid gray;
+          width: 13%; }
+
+.AmTimeSelect div {
+  padding: 0px;
+  text-align: center; }
+  .AmTimeSelect div table {
+    width: 100%; }
+    .AmTimeSelect div table tr {
+      margin-top: 0px !important;
+      padding: 0px; }
+      .AmTimeSelect div table tr td {
+        border: 1px solid gray;
+        width: 25%;
+        color: #0c60ee; }
+        .AmTimeSelect div table tr td p {
+          color: #0c60ee; }
+
+.description {
+  white-space: normal !important; }
+
+.address {
+  white-space: normal !important; }
 
 .forgetPW .logo {
   width: 100px;
