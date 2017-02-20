@@ -1,5 +1,4 @@
 angular.module('app.services', []);
-
 angular.module('app.services')
 
 .factory('Chats', function() {
