@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'app.services' is found in services.js
 // 'app.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.services'])
+angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directives', 'app.filters'])
 
 .run(function($ionicPlatform) {
 	$ionicPlatform.ready(function() {
@@ -50,29 +50,29 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
 		}
 	})
 
-    //医生列表
-    .state('tab.doctorList', {
-      url: '/dash/doctor-list',
-      views: {
-        'tab-dash': {
-          templateUrl: 'templates/doctor-list.html',
-          controller: 'DoctorListCtrl'
-        }
-      }
-    })
+	//医生列表
+	.state('tab.doctorList', {
+		url: '/dash/doctor-list',
+		views: {
+			'tab-dash': {
+				templateUrl: 'templates/doctor-list.html',
+				controller: 'DoctorListCtrl'
+			}
+		}
+	})
 
-    //医生详情
-    .state('tab.doctorDetails', {
-      url: '/dash/doctor-list/doctor-details',
-      views: {
-        'tab-dash': {
-          templateUrl: 'templates/doctor-details.html',
-          controller: 'DoctorDetailsCtrl'
-        }
-      }
-    })
+	//医生详情
+	.state('tab.doctorDetails', {
+		url: '/dash/doctor-list/doctor-details',
+		views: {
+			'tab-dash': {
+				templateUrl: 'templates/doctor-details.html',
+				controller: 'DoctorDetailsCtrl'
+			}
+		}
+	})
 
-    .state('tab.chats', {
+	.state('tab.chats', {
 			url: '/chats',
 			views: {
 				'tab-chats': {
@@ -91,15 +91,15 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
 			}
 		})
 
-  .state('tab.personalCenter', {
-    url: '/personal-center',
-    views: {
-      'tab-personal-center': {
-        templateUrl: 'templates/personal-center.html',
-        controller: 'PersonalCenterCtrl'
-      }
-    }
-  });
+	.state('tab.personalCenter', {
+		url: '/personal-center',
+		views: {
+			'tab-personal-center': {
+				templateUrl: 'templates/personal-center.html',
+				controller: 'PersonalCenterCtrl'
+			}
+		}
+	});
 
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/tab/dash');
