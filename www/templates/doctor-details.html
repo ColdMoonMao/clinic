@@ -1,0 +1,50 @@
+<ion-view view-title="医生详情" >
+  <ion-content class="padding">
+
+    <div class=" tabs-striped list" style="margin: 0px; padding: 0px" >
+
+      <!--医生-->
+      <a class="item item-thumbnail-left" >
+        <img ng-src="{{doctor.img}}">
+        <h2>{{doctor.name}}</h2>
+        <h4>{{doctor.hospital}}</h4>
+        <p>{{doctor.description}}</p>
+      </a>
+    </div>
+
+      按钮
+      <div class="list row">
+        <button class="button button-clear button-stable  col-50" style="border-bottom: 3px solid #4b8bf4">预约</button>
+        <button class="button button-clear button-stable col-50">资料</button>
+      </div>
+
+      轮播
+      <ion-slide-box style="height: 400px"  options="options" slider="data.slider" does-continue="true" auto-play="true" slide-interval=1000 show-pager="false"  >
+        <!--//预约-->
+        <ion-slide>
+          <div class="box" >
+            <div>爱尔诊所后宰门诊室,后宰门130号创之兴大厦一单元122(中户)</div>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="box" style="background-color: peru; height: 350px">资料</div>
+        </ion-slide>
+      </ion-slide-box>
+
+
+
+    <!--tab贴换-->
+
+    <!--<div class="tabs tabs-top" >-->
+      <!--<a class="tab-item active">-->
+        <!--Home-->
+      <!--</a>-->
+      <!--<a class="tab-item">-->
+        <!--Favorites-->
+      <!--</a>-->
+
+    <!--</div>-->
+
+  </ion-content>
+</ion-view>

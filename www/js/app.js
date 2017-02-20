@@ -50,12 +50,34 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
 		}
 	})
 
-	.state('tab.chats', {
+    //医生列表
+    .state('tab.doctorList', {
+      url: '/dash/doctor-list',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/doctor-list.html',
+          controller: 'DoctorListCtrl'
+        }
+      }
+    })
+
+    //医生详情
+    .state('tab.doctorDetails', {
+      url: '/dash/doctor-list/doctor-details',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/doctor-details.html',
+          controller: 'DoctorDetailsCtrl'
+        }
+      }
+    })
+
+    .state('tab.chats', {
 			url: '/chats',
 			views: {
 				'tab-chats': {
 					templateUrl: 'templates/tab-chats.html',
-					controller: 'ChatsCtrl'
+					// controller: 'ChatsCtrl'
 				}
 			}
 		})
@@ -64,7 +86,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
 			views: {
 				'tab-chats': {
 					templateUrl: 'templates/chat-detail.html',
-					controller: 'ChatDetailCtrl'
+					// controller: 'ChatDetailCtrl'
 				}
 			}
 		})
@@ -74,7 +96,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
 		views: {
 			'tab-account': {
 				templateUrl: 'templates/tab-account.html',
-				controller: 'AccountCtrl'
+				// controller: 'AccountCtrl'
 			}
 		}
 	});

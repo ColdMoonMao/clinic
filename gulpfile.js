@@ -7,7 +7,8 @@ var minifyCss = require('gulp-minify-css');
 var browserSync = require('browser-sync').create();
 // 合并controllers
 gulp.task('concat-controllers', function() {
-	setTimeout(() => {
+	setTimeout(function () {
+
 		return gulp.src(['www/js/controllers/base.js', 'www/js/controllers/*.js'])
 			.pipe(concat('controllers.js'))
 			// .pipe(uglify())
@@ -45,7 +46,8 @@ gulp.task('sass', ['concat-sass'], function(done) {
 
 
 // 浏览器重载 合并controller和services
-gulp.task('js-watch', ['concat-controllers', 'concat-services'], () => {
+gulp.task('js-watch', ['concat-controllers', 'concat-services'],function () {
+
 	browserSync.reload();
 });
 
