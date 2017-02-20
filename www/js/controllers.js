@@ -28,3 +28,6 @@ angular.module('app.controllers')
 		enableFriends: true
 	};
 }]);
+/**
+ * Created by liudong on 17-2-18.
+ */
