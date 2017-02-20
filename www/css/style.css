@@ -1,4 +1,5 @@
 .appCenter {
+  background-color: #f8f8f8;
   padding: 0; }
   .appCenter .button {
     color: #12acef; }
@@ -24,3 +25,9 @@
 
 .appHousehold {
   padding: 0; }
+
+.appAdd {
+  background-color: #f8f8f8;
+  padding: 0; }
+  .appAdd .button {
+    color: #12acef; }

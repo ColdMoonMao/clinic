@@ -137,6 +137,16 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
           controller: 'HouseholdContactsCtrl'
         }
       }
+    })
+    //添加联系人
+    .state('tab.addMan', {
+      url: '/personal-center/add-man',
+      views: {
+        'tab-personal-center': {
+          templateUrl: 'templates/add-man.html',
+          controller: 'AddManCtrl'
+        }
+      }
     });
 
 
