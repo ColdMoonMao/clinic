@@ -66,3 +66,7 @@ angular.module('app.controllers').controller('DoctorListCtrl', function($scope,$
     }
 
   })
+
+/**
+ * Created by liudong on 17-2-18.
+ */
