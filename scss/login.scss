@@ -1,0 +1,35 @@
+.login {
+	.logo {
+		width: 100px;
+		margin: 10px auto 100px auto;
+		display: block;
+	}
+	input {
+		padding-left: 30px;
+	}
+	i {
+		color: $calm;
+	}
+	.button {
+		border: 1px solid #ddd;
+		font-weight: bold;
+	}
+	.row {
+		margin-bottom: 100px;
+		a {
+			color: #BBB;
+		}
+	}
+	.text-left {
+		text-align: left;
+	}
+	.text-right {
+		text-align: right;
+	}
+	.bgi {
+		margin: 0 -10px -10px -10px;
+		img {
+			width: 100%;
+		}
+	}
+}

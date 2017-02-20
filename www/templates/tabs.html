@@ -3,22 +3,22 @@ Create tabs with an icon and label, using the tabs-positive style.
 Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
-<ion-tabs class="tabs-icon-top tabs-color-active-positive"  ng-class="{'tabs-item-hide': $root.hideTab}">
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
-  <!-- Dashboard Tab -->
-  <ion-tab title="首页" icon-off="ion-home" icon-on="ion-home" href="#/tab/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
-  </ion-tab>
+	<!-- Dashboard Tab -->
+	<ion-tab title="首页" icon-off="ion-home" icon-on="ion-home" href="#/tab/dash">
+		<ion-nav-view name="tab-dash"></ion-nav-view>
+	</ion-tab>
 
-  <!-- Chats Tab -->
-  <ion-tab title="我的服务" icon-off="ion-ios-keypad" icon-on="ion-ios-keypad" href="#/tab/chats">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
-  </ion-tab>
+	<!-- Chats Tab -->
+	<ion-tab title="我的服务" icon-off="ion-ios-keypad" icon-on="ion-ios-keypad" href="#/tab/chats">
+		<ion-nav-view name="tab-chats"></ion-nav-view>
+	</ion-tab>
 
-  <!-- Account Tab -->
-  <ion-tab title="个人中心" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/personal-center">
-    <ion-nav-view name="tab-personal-center"></ion-nav-view>
-  </ion-tab>
+	<!-- Account Tab -->
+	<ion-tab title="个人中心" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/personal-center">
+		<ion-nav-view name="tab-personal-center"></ion-nav-view>
+	</ion-tab>
 
 
 </ion-tabs>

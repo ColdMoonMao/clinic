@@ -38,7 +38,7 @@ gulp.task('concat-filters', function() {
 
 //合并scss
 gulp.task('concat-sass', function() {
-	return gulp.src(['sass/!style.scss'])
+	return gulp.src(['scss/ionic.app.scss', 'scss/*.scss', '!scss/style.scss'])
 		.pipe(concat('style.scss'))
 		// .pipe(uglify())
 		.pipe(gulp.dest('scss/'));
@@ -88,7 +88,7 @@ gulp.task('watch', ['concat-controllers', 'concat-services', 'concat-directives'
 		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
 	});
 	//监控sass文件,有变化 转换css
-	gulp.watch('sass/*.scss', ['sass']).on('change', function(event) {
+	gulp.watch('scss/*.scss', ['sass']).on('change', function(event) {
 		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
 	});
 	//监控css文件,有变化刷新浏览器.
