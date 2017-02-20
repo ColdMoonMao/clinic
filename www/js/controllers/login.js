@@ -3,7 +3,7 @@
  */
 angular.module('app.controllers').controller('LoginCtrl', ['$scope', '$state', function($scope, $state) {
 	$scope.onLogin = function() {
-		$state.go('tab.dash');
+		$state.go('tab.home');
 	}
 	$scope.onForgotPW = function() {
 		console.log(1);

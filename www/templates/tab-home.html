@@ -1,0 +1,81 @@
+<ion-view view-title="爱尔生活">
+	<ion-content class=" home">
+		<!--<<<<<轮播图-->
+		<div class="slide-pic">
+			<ion-slide-box on-slide-changed="slideHasChanged($index)">
+				<ion-slide>
+					<div class="box">
+						1
+						<img src="../img/login-bgi.png" alt="">
+					</div>
+				</ion-slide>
+				<ion-slide>
+					<div class="box">
+						2
+						<img src="../img/login-bgi.png" alt="">
+					</div>
+				</ion-slide>
+				<ion-slide>
+					<div class="box">
+						3
+						<img src="../img/login-bgi.png" alt="">
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+		</div>
+		<!--轮播图>>>>>-->
+		<!--<<<<网格-->
+		<div class="row grid-menu">
+			<div class="col">
+				<div class="list">
+					<a class="item item-avatar a1" href="#">
+						<img src="../img/ionic.png">
+						<h2>复诊</h2>
+						<p>及时复诊预约</p>
+					</a>
+				</div>
+				<div class="list">
+					<a class="item item-avatar a2" href="#">
+						<img src="../img/ionic.png">
+						<h2>名医联盟</h2>
+						<p>线上咨询</p>
+					</a>
+				</div>
+			</div>
+			<div class="col">
+				<div class="list">
+					<a class="item item-avatar a3" href="#">
+						<img src="../img/ionic.png">
+						<h2>爱尔诊所</h2>
+						<p>名医坐诊</p>
+					</a>
+				</div>
+				<div class="list">
+					<a class="item item-avatar a4" href="#">
+						<img src="../img/ionic.png">
+						<h2>商户联盟</h2>
+						<p>信赖商户</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--网格>>>-->
+		<div class="divider"></div>
+		<a class="button button-block button-balanced" href="#/tab/home/doctor-list">医生列表</a>
+
+		<!-- <<<名医联盟推荐医生-->
+		<div class="list doc-list">
+			<div class="item item-divider">
+				名医联盟推荐医生
+			</div>
+			<a class="item item-thumbnail-left" href="#" ng-repeat="item in recommendDoctorArr">
+				<img src="../img/ben.png">
+				<h2>{{item.name}}<span>{{item.hospital_department_name+'&nbsp;'+item.job_title}}</span></h2>
+				<h4>{{item.hospital_name}}</h4>
+				<p>{{item.introducation}}</p>
+			</a>
+		</div>
+		<!--名医联盟推荐医生>>>>>>>-->
+
+	</ion-content>
+</ion-view>
