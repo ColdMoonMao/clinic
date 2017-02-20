@@ -18,3 +18,15 @@
 
 .ion-ipod {
   color: #7c70f2; }
+
+.dateSelect div table tr td{
+  color: #007aff;
+  width: 12.5%;
+  border: 1px solid gray;
+}
+
+.AmTimeSelect div table tr td{
+  color: #007aff;
+  width: 90px;
+  border: 1px solid gray;
+}

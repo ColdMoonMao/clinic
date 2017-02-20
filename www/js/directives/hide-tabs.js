@@ -1,7 +1,7 @@
 /**
  * Created by a1 on 2017/2/18.
  */
-angular.module('app.directive')
+angular.module('app.directives')
   .directive('hideTabs',function ($rootScope) {
     return{
       restrict:'A',//属性
