@@ -1,0 +1,31 @@
+<ion-view view-title="登录" hide-nav-bar=true>
+	<ion-content class="padding login">
+		<!--<div class="row">-->
+		<!--<div class=" col-33 col-offset-33">-->
+		<img class="logo" src="../img/hospital-logo.svg" alt="">
+		<!--</div>-->
+		<!--</div>-->
+		<div class="list list-inset">
+			<label class="item item-input">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                <input type="text" placeholder="请输入手机号码">
+            </label>
+		</div>
+		<div class="list list-inset">
+			<label class="item item-input">
+                <i class="icon ion-ios-locked-outline placeholder-icon"></i>
+                <input type="text" placeholder="请输入密码">
+            </label>
+		</div>
+		<button ng-click="onLogin()" class="button  button-full button-light">
+				登录
+		</button>
+		<div class="row">
+			<a ng-click="onForgotPW()" class=" col text-left icon-left  button-clear button-dark">忘记密码</a>
+			<a ng-click="onRegister()" class=" col text-right icon-left  button-clear button-dark">注册</a>
+		</div>
+		<div class="bgi">
+			<img src="../img/login-bgi.png" alt="">
+		</div>
+	</ion-content>
+</ion-view>

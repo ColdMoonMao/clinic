@@ -1,13 +1,13 @@
-<ion-view view-title="个人信息" hide-tabs="true">
-  <ion-content class="padding appMessage">
+<ion-view view-title="添加联系人" hide-tabs="true">
+  <ion-content class="padding appAdd">
     <div class="list card">
-        <div class="row item">
+        <div class="row item ">
           <div class="col col-33">姓名</div>
-          <div class="col">陈冬明</div>
+          <input class="col" placeholder="请输入姓名" style="border:0 ;">
         </div>
       <div class="row item">
         <div class="col col-33">身份证</div>
-        <div class="col">610112198312282512</div>
+        <input class="col" placeholder="请输入身份证号" style="border:0 ;">
       </div>
 
       <div class="row item">
@@ -19,20 +19,23 @@
           </ion-list>
         </div>
       </div>
-
+      <div class="row item">
+        <div class="col col-33">联系电话</div>
+        <input class="col" placeholder="请输入联系电话" style="border:0 ;">
+      </div>
       <div class="row item">
         <div class="col col-33">地址</div>
-        <div class="col">大寨路</div>
+        <input class="col" placeholder="请输入地址" style="border:0 ;">
       </div>
       </div>
 
-    <div class="card  addPadding">
+    <div class="card">
       <div class="item item-text-wrap">
         温馨提示<br>
         请您正确填写个人信息，以便为您带来更优质的服务！
       </div>
     </div>
-    <button class="button button-block button-positive" ng-click="onSaveButtonClick()">保存</button>
+    <button class="button button-block button-positive" ng-click="onAddManButtonClick()">保存</button>
 
   </ion-content>
 </ion-view>

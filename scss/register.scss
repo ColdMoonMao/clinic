@@ -1,0 +1,51 @@
+.register {
+	.logo {
+		width: 100px;
+		margin: 10px auto 100px auto;
+		display: block;
+	}
+	.list {
+		.button {
+			background: none;
+			border: none;
+			padding: 0 15px;
+		}
+	}
+	input {
+		padding-left: 30px;
+	}
+	i {
+		color: $calm;
+	}
+	.button {
+		border: 1px solid #ddd;
+		font-weight: bold;
+	}
+	.row {
+		margin-bottom: 100px;
+		a {
+			color: #BBB;
+		}
+	}
+	.text-left {
+		text-align: left;
+	}
+	.text-right {
+		text-align: right;
+	}
+	.list-inset {
+		margin: 10px;
+	}
+	.item-checkbox {
+		border: none;
+		color: $grey;
+		font-size: 12px;
+		padding: 10px;
+		span {
+			margin: auto;
+			display: inline-block;
+			width: 80%;
+			text-align: center;
+		}
+	}
+}
