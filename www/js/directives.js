@@ -1,7 +1,4 @@
 angular.module('app.directives', [])
-/**
- * Created by a1 on 2017/2/18.
- */
 angular.module('app.directives')
 	.directive('hideTabs', function($rootScope) {
 		return {
@@ -14,7 +11,6 @@ angular.module('app.directives')
 				});
 				scope.$on('$ionicView.beforeLeave', function() {
 					$rootScope.hideTab = false; //返回之前让都显示
-
 				});
 
 			}

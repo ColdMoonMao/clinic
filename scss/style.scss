@@ -21,6 +21,15 @@ $fa-font-path: "../lib/font-awesome-4.7.0/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 @import "www/lib/font-awesome-4.7.0/scss/font-awesome";
+.appAdd{
+  background-color: #f8f8f8;
+    padding: 0;
+
+  .button{
+    color: #12acef;
+  }
+}
+
 .forgetPW {
 	.logo {
 		width: 100px;
@@ -48,6 +57,10 @@ $fa-font-path: "../lib/font-awesome-4.7.0/fonts" !default;
 		margin: 10px;
 	}
 }
+.appHousehold{
+  padding: 0;
+}
+
 .login {
 	.logo {
 		width: 100px;
@@ -83,27 +96,53 @@ $fa-font-path: "../lib/font-awesome-4.7.0/fonts" !default;
 		}
 	}
 }
-.ion-android-call {
-  color: aqua;
+.appCenter{
+  background-color: #f8f8f8;
+  padding: 0;
+  .button{
+    color: #12acef;
+  }
+  .person-icon-inner{
+    font-size: 1rem !important;
+  }
+
+  .person-icon-outer{
+    opacity: 0.5;
+  }
+  .message{
+    i{
+      color: #ffb045;
+    }
+  }
+  .change{
+    i{
+      color: #fa628e;
+    }
+  }
+  .order{
+    i{
+      color: #ff9377;
+    }
+  }
+  .linkman{
+    i{
+      color: #59d59a;
+    }
+  }
+  .opinion{
+    i{
+      color: #57b5fd;
+    }
+  }
+  .about{
+    i{
+      color: #7c70f2;
+    }
+  }
 }
-.ion-compose{
-  color: #ffce7e;
-}
-.ion-ios-locked{
-  color: #fc9eb9;
-}
-.ion-android-list{
-  color: #ff9377;
-}
-.ion-person-stalker{
-  color: #53d396;
-}
-.ion-ios-list{
-  color: #57b5fd;
-}
-.ion-ipod{
-  //color: #7c70f2;
-  background-color: #0c60ee;
+
+.appMessage{
+  padding: 0;
 }
 
 .register {

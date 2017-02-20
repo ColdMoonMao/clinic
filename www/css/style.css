@@ -12134,6 +12134,12 @@ a.button {
   overflow: visible;
   clip: auto; }
 
+.appAdd {
+  background-color: #f8f8f8;
+  padding: 0; }
+  .appAdd .button {
+    color: #12acef; }
+
 .forgetPW .logo {
   width: 100px;
   margin: 10px auto 100px auto;
@@ -12156,6 +12162,9 @@ a.button {
 
 .forgetPW .list-inset {
   margin: 10px; }
+
+.appHousehold {
+  padding: 0; }
 
 .login .logo {
   width: 100px;
@@ -12188,26 +12197,30 @@ a.button {
   .login .bgi img {
     width: 100%; }
 
-.ion-android-call {
-  color: aqua; }
+.appCenter {
+  background-color: #f8f8f8;
+  padding: 0; }
+  .appCenter .button {
+    color: #12acef; }
+  .appCenter .person-icon-inner {
+    font-size: 1rem !important; }
+  .appCenter .person-icon-outer {
+    opacity: 0.5; }
+  .appCenter .message i {
+    color: #ffb045; }
+  .appCenter .change i {
+    color: #fa628e; }
+  .appCenter .order i {
+    color: #ff9377; }
+  .appCenter .linkman i {
+    color: #59d59a; }
+  .appCenter .opinion i {
+    color: #57b5fd; }
+  .appCenter .about i {
+    color: #7c70f2; }
 
-.ion-compose {
-  color: #ffce7e; }
-
-.ion-ios-locked {
-  color: #fc9eb9; }
-
-.ion-android-list {
-  color: #ff9377; }
-
-.ion-person-stalker {
-  color: #53d396; }
-
-.ion-ios-list {
-  color: #57b5fd; }
-
-.ion-ipod {
-  background-color: #0c60ee; }
+.appMessage {
+  padding: 0; }
 
 .register .logo {
   width: 100px;
