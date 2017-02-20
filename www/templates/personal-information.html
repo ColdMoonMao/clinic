@@ -1,33 +1,33 @@
 <ion-view view-title="个人信息" hide-tabs="true">
   <ion-content class="padding appMessage">
     <div class="list card">
-        <div class="row item">
-          <div class="col col-33">姓名</div>
-          <div class="col">陈冬明</div>
-        </div>
-      <div class="row item">
+      <label class="row item">
+        <div class="col col-33">姓名</div>
+        <div class="col">陈冬明</div>
+      </label>
+      <label class="row item">
         <div class="col col-33">身份证</div>
         <div class="col">610112198312282512</div>
-      </div>
+      </label>
 
-      <div class="row item">
-        <div class="col col-33">性别</div>
-        <div class="col">
-          <ion-list>
-            <ion-radio  ng-model="choice" ng-value="'A'">男</ion-radio>
-            <ion-radio  ng-model="choice" ng-value="'B'">女</ion-radio>
-          </ion-list>
-        </div>
-      </div>
+      <label class="row item">
+        <span class="col col-33">性别</span>
+        <label>
+          <ion-radio ng-model="choice" ng-value="'A'">男</ion-radio>
+        </label>
+        <label>
+          <ion-radio ng-model="choice" ng-value="'B'">女</ion-radio>
+        </label>
+      </label>
 
-      <div class="row item">
+      <label class="row item">
         <div class="col col-33">地址</div>
         <div class="col">大寨路</div>
-      </div>
-      </div>
+      </label>
+    </div>
 
     <div class="card  addPadding">
-      <div class="item item-text-wrap">
+      <div class="item item-text-wrap hint">
         温馨提示<br>
         请您正确填写个人信息，以便为您带来更优质的服务！
       </div>

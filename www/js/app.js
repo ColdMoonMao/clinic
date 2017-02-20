@@ -125,46 +125,59 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
 				}
 			}
 		})
-		//个人中心
-		.state('tab.personalCenter', {
-			url: '/personal-center',
-			views: {
-				'tab-personal-center': {
-					templateUrl: 'templates/personal-center.html',
-					controller: 'PersonalCenterCtrl'
-				}
-			}
-		})
-		//个人信息
-		.state('tab.personalInformation', {
-			url: '/personal-center/personal-information',
-			views: {
-				'tab-personal-center': {
-					templateUrl: 'templates/personal-information.html',
-					controller: 'PersonalInformationCtrl'
-				}
-			}
-		})
-		//家庭联系人
-		.state('tab.householdContacts', {
-			url: '/personal-center/household-contacts',
-			views: {
-				'tab-personal-center': {
-					templateUrl: 'templates/household-contacts.html',
-					controller: 'HouseholdContactsCtrl'
-				}
-			}
-		})
-		//添加联系人
-		.state('tab.addMan', {
-			url: '/personal-center/add-man',
-			views: {
-				'tab-personal-center': {
-					templateUrl: 'templates/add-man.html',
-					controller: 'AddManCtrl'
-				}
-			}
-		});
+
+
+   //个人中心
+  .state('tab.personalCenter', {
+    url: '/personal-center',
+    views: {
+      'tab-personal-center': {
+        templateUrl: 'templates/personal-center.html',
+        controller: 'PersonalCenterCtrl'
+      }
+    }
+  })
+    //个人信息
+    .state('tab.personalInformation', {
+      url: '/personal-center/personal-information',
+      views: {
+        'tab-personal-center': {
+          templateUrl: 'templates/personal-information.html',
+          controller: 'PersonalInformationCtrl'
+        }
+      }
+    })
+    //家庭联系人
+    .state('tab.householdContacts', {
+      url: '/personal-center/household-contacts',
+      views: {
+        'tab-personal-center': {
+          templateUrl: 'templates/household-contacts.html',
+          controller: 'HouseholdContactsCtrl'
+        }
+      }
+    })
+    //添加联系人
+    .state('tab.addMan', {
+      url: '/personal-center/add-man',
+      views: {
+        'tab-personal-center': {
+          templateUrl: 'templates/add-man.html',
+          controller: 'AddManCtrl'
+        }
+      }
+    })
+    //修改联系人
+    .state('tab.alterMan', {
+      url: '/personal-center/alter-man',
+      views: {
+        'tab-personal-center': {
+          templateUrl: 'templates/alter-man.html',
+          controller: 'AlterManCtrl'
+        }
+      }
+    });
+
 
 
 	// if none of the above states are matched, use this as the fallback

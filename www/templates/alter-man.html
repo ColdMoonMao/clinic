@@ -1,13 +1,13 @@
-<ion-view view-title="添加联系人" hide-tabs="true">
-  <ion-content class="padding appAdd">
+<ion-view view-title="修改联系人" hide-tabs="true">
+  <ion-content class="padding appAlter">
     <div class="list card">
         <label class="row item ">
           <div class="col col-33">姓名</div>
-          <input class="col" placeholder="请输入姓名">
+          <div class="col">邓超</div>
         </label>
       <label class="row item">
         <div class="col col-33">身份证</div>
-        <input class="col" placeholder="请输入身份证号">
+        <div class="col">610112198312282512</div>
       </label>
 
       <label class="row item">
@@ -21,11 +21,11 @@
       </label>
       <label class="row item">
         <div class="col col-33">联系电话</div>
-        <input class="col" placeholder="请输入联系电话">
+        <div class="col">13572229938</div>
       </label>
       <label class="row item">
         <div class="col col-33">地址</div>
-        <input class="col" placeholder="请输入地址">
+        <div class="col">延安</div>
       </label>
       </div>
 
@@ -36,6 +36,7 @@
       </div>
     </div>
     <button class="button button-block button-positive" ng-click="onAddManButtonClick()">保存</button>
+    <button class="button button-block button-assertive" ng-click="onDeleteManButtonClick()">删除</button>
 
   </ion-content>
 </ion-view>

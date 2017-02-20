@@ -9,5 +9,8 @@ angular.module('app.controllers')
     console.log($scope.peopleArr)
     $scope.onAddButtonClick=function () {
       $state.go('tab.addMan')
-    }
+    },
+      $scope.changePage=function () {
+        $state.go('tab.alterMan')
+      }
   }])
