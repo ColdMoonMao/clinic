@@ -1,4 +1,14 @@
 angular.module('app.controllers', []);
+/**
+ * Created by liudong on 17-2-18.
+ */
+angular.module('app.controllers')
+  .controller('AddManCtrl', ['$scope','$state', function($scope,$state) {
+    $scope.onAddManButtonClick=function () {
+      
+    }
+  }])
+
 angular.module('app.controllers')
 
 .controller('DashCtrl', ['$scope', function($scope) {
@@ -87,14 +97,38 @@ angular.module('app.controllers').controller('LoginCtrl', ['$scope', '$state', f
  * Created by liudong on 17-2-18.
  */
 angular.module('app.controllers')
-  .controller('PersonalCenterCtrl', ['$scope', function($scope) {}])
+  .controller('HouseholdContactsCtrl', ['$scope','Contacts','$state', function($scope,Contacts,$state) {
+
+    $scope.peopleArr=Contacts.all();
+
+    console.log($scope.peopleArr)
+    $scope.onAddButtonClick=function () {
+      $state.go('tab.addMan')
+    }
+  }])
 
 /**
  * Created by liudong on 17-2-18.
  */
 angular.module('app.controllers')
+  .controller('PersonalCenterCtrl', ['$scope','$state', function($scope,$state) {
+
+  }])
+
+/**
+ * Created by liudong on 17-2-18.
+ */
+angular.module('app.controllers')
+<<<<<<< HEAD
   .controller('PersonalInformationCtrl', ['$scope', function($scope) {}])
 
 angular.module('app.controllers').controller('RegisterCtrl', ['$scope', '$state', function($scope, $state) {
 
 }])
+=======
+  .controller('PersonalInformationCtrl', ['$scope', function($scope) {
+    $scope.onSaveButtonClick=function () {
+      
+    }
+  }])
+>>>>>>> 5d2060d81bf42b0448d50c97d2fe73a79dccac91
