@@ -1,48 +1,38 @@
 <ion-view view-title="个人信息">
-  <ion-content class="padding">
-
-      <div class="list">
-
-        <a class="item item-icon-left" href="#">
-          <div>刘栋</div>
-          <i class="icon ion-android-call"></i>
-          18165152865
-        </a>
-
-    <br>
-
-      <div class="list">
-        <a class="item item-icon-left" href="#">
-          <i class="icon ion-compose"></i>
-          编辑个人信息
-
-        </a>
-
-        <a class="item item-icon-left" href="#">
-          <i class="icon ion-ios-locked"></i>
-          修改密码
-        </a>
-
-        <a class="item item-icon-left" href="#">
-          <i class="icon ion-android-list"></i>
-          我的预约
-        </a>
-        <a class="item item-icon-left" href="#">
-          <i class="icon ion-person-stalker"></i>
-          家庭联系人
-        </a>
-        <a class="item item-icon-left" href="#">
-          <i class="icon ion-ios-list"></i>
-          意见反馈
-        </a>
-        <a class="item item-icon-left" href="#">
-          <i class="icon ion-ipod"></i>
-          关于
-        </a>
+  <ion-content class="padding appMessage">
+    <div class="list card">
+        <div class="row item ">
+          <div class="col col-33">姓名</div>
+          <div class="col">陈冬明</div>
+        </div>
+      <div class="row item">
+        <div class="col col-33">身份证</div>
+        <div class="col">610112198312282512</div>
       </div>
 
-    <br>
-    <button class="button button-block button-positive">退出登录</button>
+      <div class="row item">
+        <div class="col col-33">性别</div>
+        <div class="col">
+          <ion-list>
+            <ion-radio  ng-model="choice" ng-value="'A'">男</ion-radio>
+            <ion-radio  ng-model="choice" ng-value="'B'">女</ion-radio>
+          </ion-list>
+        </div>
+      </div>
+
+      <div class="row item">
+        <div class="col col-33">地址</div>
+        <div class="col">大寨路</div>
+      </div>
+      </div>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        温馨提示<br>
+        请您正确填写个人信息，以便为您带来更优质的服务！
+      </div>
+    </div>
+    <button class="button button-block button-positive">保存</button>
 
   </ion-content>
 </ion-view>

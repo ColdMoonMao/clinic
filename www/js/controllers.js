@@ -68,7 +68,23 @@ angular.module('app.controllers').controller('DoctorListCtrl', function($scope, 
  * Created by liudong on 17-2-18.
  */
 angular.module('app.controllers')
-  .controller('PersonalCenterCtrl', ['$scope', function($scope) {}])
+  .controller('HouseholdContactsCtrl', ['$scope','Contacts', function($scope,Contacts) {
+
+    $scope.peopleArr=Contacts.all();
+
+    console.log($scope.peopleArr)
+    $scope.onAddButtonClick=function () {
+      console.log('ok')
+    }
+  }])
+
+/**
+ * Created by liudong on 17-2-18.
+ */
+angular.module('app.controllers')
+  .controller('PersonalCenterCtrl', ['$scope','$state', function($scope,$state) {
+
+  }])
 
 /**
  * Created by liudong on 17-2-18.

@@ -108,16 +108,37 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
 				}
 			}
 		})
+   //个人中心
+  .state('tab.personalCenter', {
+    url: '/personal-center',
+    views: {
+      'tab-personal-center': {
+        templateUrl: 'templates/personal-center.html',
+        controller: 'PersonalCenterCtrl'
+      }
+    }
+  })
+    //个人信息
+    .state('tab.personalInformation', {
+      url: '/personal-center/personal-information',
+      views: {
+        'tab-personal-center': {
+          templateUrl: 'templates/personal-information.html',
+          controller: 'PersonalInformationCtrl'
+        }
+      }
+    })
+    //家庭联系人
+    .state('tab.householdContacts', {
+      url: '/personal-center/household-contacts',
+      views: {
+        'tab-personal-center': {
+          templateUrl: 'templates/household-contacts.html',
+          controller: 'HouseholdContactsCtrl'
+        }
+      }
+    });
 
-	.state('tab.personalCenter', {
-		url: '/personal-center',
-		views: {
-			'tab-personal-center': {
-				templateUrl: 'templates/personal-center.html',
-				controller: 'PersonalCenterCtrl'
-			}
-		}
-	});
 
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/tab/dash');
