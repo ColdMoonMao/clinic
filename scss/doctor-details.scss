@@ -1,0 +1,56 @@
+.dateSelect div{
+  padding: 0px;
+  text-align: center;
+  table {
+    width: 100%;
+    thead{
+      tr{
+        padding: 0px;
+        td{
+          border: 1px solid gray;
+          width: 13%;
+        }
+      }
+    }
+    tbody{
+      color: #0c60ee;
+      tr{
+        margin-top: 0px !important;
+        padding: 0px;
+        td{
+          border: 1px solid gray;
+          width: 13%;
+        }
+      }
+    }
+  }
+}
+
+
+.AmTimeSelect div{
+  padding: 0px;
+  text-align: center;
+  table {
+    width: 100%;
+    tr{
+      margin-top: 0px !important;
+      padding: 0px;
+      td {
+        border: 1px solid gray;
+        width: 25%;
+        color: #0c60ee;
+        p{
+          color: #0c60ee;
+        }
+      }
+    }
+  }
+}
+
+.description{
+  white-space:normal !important;
+}
+
+.address{
+  white-space:normal !important;
+}
