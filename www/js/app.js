@@ -86,20 +86,20 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
 			views: {
 				'tab-chats': {
 					templateUrl: 'templates/chat-detail.html',
-					// controller: 'ChatDetailCtrl'
+					controller: 'ChatDetailCtrl'
 				}
 			}
 		})
 
-	.state('tab.account', {
-		url: '/account',
-		views: {
-			'tab-account': {
-				templateUrl: 'templates/tab-account.html',
-				// controller: 'AccountCtrl'
-			}
-		}
-	});
+  .state('tab.personalCenter', {
+    url: '/personal-center',
+    views: {
+      'tab-personal-center': {
+        templateUrl: 'templates/personal-center.html',
+        controller: 'PersonalCenterCtrl'
+      }
+    }
+  });
 
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/tab/dash');
