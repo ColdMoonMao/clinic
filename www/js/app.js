@@ -147,6 +147,18 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
         }
       }
     })
+
+    //我的预约
+    .state('tab.myOrder', {
+      url: '/personal-center/my-order',
+      views: {
+        'tab-personal-center': {
+          templateUrl: 'templates/my-order.html',
+          controller: 'MyOrderCtrl'
+        }
+      }
+    })
+
     //家庭联系人
     .state('tab.householdContacts', {
       url: '/personal-center/household-contacts',

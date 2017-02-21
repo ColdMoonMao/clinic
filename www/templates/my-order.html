@@ -1,0 +1,38 @@
+<ion-view view-title="添加联系人" hide-tabs="true">
+  <ion-content class="padding appAdd">
+    <div class="list card">
+        <label class="row item ">
+          <div class="col col-33">姓名</div>
+          <input class="col" placeholder="请输入姓名">
+        </label>
+      <label class="row item">
+        <div class="col col-33">身份证</div>
+        <input class="col" placeholder="请输入身份证号">
+      </label>
+
+      <label class="row item">
+        <span class="col col-33">性别</span>
+        <label ng-repeat="item in sex">
+          <ion-radio  ng-model="data.value" ng-value="item.value">{{item.text}}</ion-radio>
+        </label>
+      </label>
+      <label class="row item">
+        <div class="col col-33">联系电话</div>
+        <input class="col" placeholder="请输入联系电话">
+      </label>
+      <label class="row item">
+        <div class="col col-33">地址</div>
+        <input class="col" placeholder="请输入地址">
+      </label>
+      </div>
+
+    <div class="padding hint">
+      <div class="item item-text-wrap hint">
+        温馨提示<br>
+        请您正确填写个人信息，以便为您带来更优质的服务！
+      </div>
+    </div>
+    <button class="button button-block button-positive" ng-click="onAddManButtonClick()">保存</button>
+
+  </ion-content>
+</ion-view>
