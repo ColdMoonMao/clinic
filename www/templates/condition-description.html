@@ -1,0 +1,48 @@
+<ion-view view-title="病情描述" hide-tabs="true">
+  <ion-content class="conditionScss ">
+    <ion-list>
+      <span>
+          <ion-checkbox ng-checked="true"><div></div></ion-checkbox>
+          <p>病情描述</p>
+      </span>
+        <span>
+          <ion-checkbox><div></div></ion-checkbox>
+          <p>支付</p>
+      </span>
+        <span>
+          <ion-checkbox><div></div></ion-checkbox>
+          <p>平台确认</p>
+      </span>
+        <span>
+          <ion-checkbox>---</ion-checkbox>
+          <p>医院就诊</p>
+      </span>
+    </ion-list>
+
+    <!--清浮动-->
+    <div style="clear: both"></div>
+    <div class="list list-inset">
+      <div class="item"><span>孙医生(工号007) 日期坐诊时间</span></div>
+      <div class="item item-divider">病情描述</div>
+      <div class="item"><textarea style="resize: none">请描述你的病情...</textarea></div>
+      <div class="item item-divider">病情图片</div>
+      <div class="item item-icon-right">上传图片
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </div>
+      <div class="item item-divider">就诊人</div>
+      <div class="item item-icon-right">请选择就诊人
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </div>
+    </div>
+    <div class="list list-inset">
+      <button class="button button-block button-positive">提交预约单</button>
+    </div>
+    <div class="list list-inset">
+      <div class="">
+        <div>温馨提示:</div>
+        <div>医生确认后请在服务历史中查看就诊时间,就诊地点和门诊预约码.</div>
+        <div>此费用为你的门诊预约费用,线下就诊需另行支付挂号费.</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

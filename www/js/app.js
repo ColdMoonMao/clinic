@@ -107,6 +107,17 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
 		}
 	})
 
+  //病情描述
+    .state('tab.conditionDescription', {
+      url: '/home/doctor-list/doctor-details/condition-description',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/condition-description.html',
+          controller: 'ConditionDescriptionCtrl'
+        }
+      }
+    })
+
 	.state('tab.chats', {
 			url: '/chats',
 			views: {

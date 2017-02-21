@@ -1,0 +1,21 @@
+.conditionScss{
+    div:nth-child(1){
+      span:nth-child(-n+3){
+        float: left;
+        width: 25%;
+        div{
+          border: 1px solid blue;width: 30px;height: 0px;padding: 0px;
+        }
+        p{
+          margin-left: 5px;
+        }
+      }
+      span:nth-last-child(1){
+        float: left;
+        width: 16%;
+        div{
+          border: 1px solid white;width: 1px;height: 0px;padding: 0px;
+        }
+      }
+    }
+}
