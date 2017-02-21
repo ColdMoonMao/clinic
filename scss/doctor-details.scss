@@ -1,3 +1,12 @@
+html body{
+  height: 100%;
+}
+.slideTab{
+  margin-top: 90px;
+  margin-bottom: 60px;
+  height: 70%;
+}
+
 .dateSelect div{
   padding: 0px;
   text-align: center;
@@ -37,7 +46,7 @@
       padding: 0px;
       td {
         border: 1px solid gray;
-        width: 25%;
+        width: 100%;
         color: #0c60ee;
         p{
           color: #0c60ee;
