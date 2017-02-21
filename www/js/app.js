@@ -120,7 +120,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
 
 	//医生列表
 	.state('tab.doctorList', {
-		url: '/home/doctor-list',
+		url: '/home/clinic/:clinicId/:departId',
 		views: {
 			'tab-home': {
 				templateUrl: 'templates/doctor-list.html',
