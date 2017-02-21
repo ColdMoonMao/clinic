@@ -1,0 +1,85 @@
+<ion-view view-title="我的服务">
+  <ion-content scroll="false">
+    <ion-slide-box show-pager="false" ion-slide-tabs slide-tabs-scrollable="false" >
+
+      <!--已确认-->
+      <ion-slide ion-slide-tab-label="已确认">
+        <ion-content>
+          <div class="list">
+
+            <a class="item" href="#">
+              <div class="row">
+                <img class="col" src="venkman.jpg">
+                <div class="col col-75 row">
+                  <h2 class="col">李医生（工号001）</h2>
+                  <p class="col" style="white-space: normal">后宰门130号创之星大厦一单元122（中户） 医师</p>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col">复诊</div>
+                <div class="col col-75">建议复诊时间：2016-01-25</div>
+              </div>
+            </a>
+          </div>
+        </ion-content>
+      </ion-slide>
+
+      <!--待确认-->
+      <ion-slide ion-slide-tab-label="待确认">
+        <ion-content>
+          <div class="list" ng-repeat="item in waitSureList">
+            <a class="item" href="#">
+              <div class="row">
+                <div class="col">{{item.contant}}</div>
+                <div class="col text-right">{{item.state}}</div>
+              </div>
+              <div class="row">
+                <div class="col">{{item.doctor}}</div>
+                <div class="col text-right red">{{item.money}}</div>
+              </div>
+            </a>
+          </div>
+        </ion-content>
+      </ion-slide>
+
+      <!--待复诊-->
+      <ion-slide ion-slide-tab-label="待复诊">
+        <ion-content>
+          <div class="list" ng-repeat="item in waitVisitList">
+            <a class="item" href="#">
+              <div class="row">
+                <div class="col">{{item.contant}}</div>
+                <div class="col text-right">{{item.state}}</div>
+              </div>
+              <div class="row">
+                <div class="col">{{item.doctor}}</div>
+                <div class="col text-right red">{{item.money}}</div>
+              </div>
+            </a>
+          </div>
+        </ion-content>
+      </ion-slide>
+
+      <!--待支付-->
+      <ion-slide ion-slide-tab-label="待支付">
+        <ion-content>
+          <div class="list" ng-repeat="item in waitPayList">
+            <a class="item" href="#">
+              <div class="row">
+                <div class="col">{{item.contant}}</div>
+                <div class="col text-right">{{item.state}}</div>
+              </div>
+              <div class="row">
+                <div class="col">{{item.doctor}}</div>
+                <div class="col text-right red">{{item.money}}</div>
+              </div>
+            </a>
+          </div>
+        </ion-content>
+      </ion-slide>
+
+    </ion-slide-box>
+  </ion-content>
+</ion-view>

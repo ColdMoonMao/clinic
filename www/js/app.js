@@ -106,26 +106,16 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
 			}
 		}
 	})
-
-	.state('tab.chats', {
-			url: '/chats',
+    //我的服务
+	.state('tab.serves', {
+			url: '/serves',
 			views: {
-				'tab-chats': {
-					templateUrl: 'templates/tab-chats.html',
-					// controller: 'ChatsCtrl'
+				'tab-serves': {
+					templateUrl: 'templates/tab-serves.html',
+					controller: 'ServesCtrl'
 				}
 			}
 		})
-		.state('tab.chat-detail', {
-			url: '/chats/:chatId',
-			views: {
-				'tab-chats': {
-					templateUrl: 'templates/chat-detail.html',
-					controller: 'ChatDetailCtrl'
-				}
-			}
-		})
-
 
    //个人中心
   .state('tab.personalCenter', {
