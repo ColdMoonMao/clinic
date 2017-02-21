@@ -12,11 +12,8 @@
 
       <label class="row item">
         <span class="col col-33">性别</span>
-        <label>
-          <ion-radio ng-model="choice" ng-value="'A'">男</ion-radio>
-        </label>
-        <label>
-          <ion-radio ng-model="choice" ng-value="'B'">女</ion-radio>
+        <label ng-repeat="item in sex">
+          <ion-radio  ng-model="data.value" ng-value="item.value">{{item.text}}</ion-radio>
         </label>
       </label>
 
