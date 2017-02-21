@@ -3,33 +3,31 @@
  */
 angular.module('app.controllers')
   .controller('ServesCtrl', ['$scope', function($scope) {
-  //   $scope.noPayOrders=[
-  //     {
-  //       contant: '2016-12-02 11:25 邓超',
-  //       doctor: '口腔科 孙医生（工号007）',
-  //       state: '加急预约',
-  //       money: '￥0.01',
-  //     },
-  //   {
-  //     contant: '2016-12-03 11:25 陈赫',
-  //       doctor: '口腔科 孙医生（工号007）',
-  //     state: '加急预约',
-  //     money: '￥0.01',
-  //   }
-  //   ];
-  //   $scope.payOrders=[
-  //     {
-  //       contant: '2016-12-02 11:25 邓超',
-  //       doctor: '口腔科 孙医生（工号007）',
-  //       state: '加急预约',
-  //       money: '￥0.01',
-  //     },
-  //     {
-  //       contant: '2016-12-03 11:25 陈赫',
-  //       doctor: '口腔科 孙医生（工号007）',
-  //       state: '加急预约',
-  //       money: '￥0.01',
-  //     }
-  //   ]
+    $scope.sureList=[
+      {
+        id:'0',
+        img:'img/mike.png',
+        doctor:'李医生（工号001）',
+        place:'后宰门130号创之星大厦一单元122（中户） 医师',
+        state:'复诊',
+        time:'建议复诊时间：2016-01-25',
+      },
+      {
+        id:'2',
+        img:'img/mike.png',
+        doctor:'李医生（工号001）',
+        place:'后宰门130号创之星大厦一单元122（中户） 医师',
+        state:'复诊',
+        time:'建议复诊时间：2016-01-25',
+      },
+      {
+        id:'3',
+        img:'img/mike.png',
+        doctor:'李医生（工号001）',
+        place:'后宰门130号创之星大厦一单元122（中户） 医师',
+        state:'复诊',
+        time:'建议复诊时间：2016-01-25',
+      }
+    ]
   }]
   )
