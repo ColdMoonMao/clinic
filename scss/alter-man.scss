@@ -13,9 +13,11 @@
     .item{
       height: 50px;
       border: none;
+      line-height: 36px;
     }
     .item-radio ,.item-content,.radio-content{
-      height: 36px!important;
+      height: 50px!important;
+      line-height: 36px;
     }
     .item-radio{
       .item-content{

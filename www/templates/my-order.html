@@ -1,0 +1,43 @@
+<ion-view view-title="我的预约" hide-tabs="true">
+  <ion-content class="appOrder" scroll="false">
+    <ion-slide-box show-pager="false" ion-slide-tabs slide-tabs-scrollable="false" >
+
+      <!--未付款-->
+      <ion-slide ion-slide-tab-label="未付款">
+        <ion-content>
+          <div class="list" ng-repeat="item in noPayOrders">
+            <a class="item" href="#">
+              <div class="row">
+                <div class="col">{{item.contant}}</div>
+                <div class="col text-right">{{item.state}}</div>
+              </div>
+              <div class="row">
+                <div class="col">{{item.doctor}}</div>
+                <div class="col text-right red">{{item.money}}</div>
+              </div>
+            </a>
+          </div>
+        </ion-content>
+      </ion-slide>
+
+      <!--已付款-->
+      <ion-slide ion-slide-tab-label="已付款">
+        <ion-content>
+          <div class="list" ng-repeat="item in payOrders">
+            <a class="item" href="#">
+              <div class="row">
+                <div class="col">{{item.contant}}</div>
+                <div class="col text-right">{{item.state}}</div>
+              </div>
+              <div class="row">
+                <div class="col">{{item.doctor}}</div>
+                <div class="col text-right red">{{item.money}}</div>
+              </div>
+            </a>
+          </div>
+        </ion-content>
+      </ion-slide>
+
+    </ion-slide-box>
+  </ion-content>
+</ion-view>
