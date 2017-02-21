@@ -5,19 +5,16 @@
 			<ion-slide-box on-slide-changed="slideHasChanged($index)">
 				<ion-slide>
 					<div class="box">
-						1
 						<img src="../img/login-bgi.png" alt="">
 					</div>
 				</ion-slide>
 				<ion-slide>
 					<div class="box">
-						2
 						<img src="../img/login-bgi.png" alt="">
 					</div>
 				</ion-slide>
 				<ion-slide>
 					<div class="box">
-						3
 						<img src="../img/login-bgi.png" alt="">
 					</div>
 				</ion-slide>
@@ -61,13 +58,12 @@
 		</div>
 		<!--网格>>>-->
 		<div class="divider"></div>
-		<a class="button button-block button-balanced" href="#/tab/home/doctor-list">医生列表</a>
 		<!-- <<<名医联盟推荐医生-->
 		<div class="list doc-list">
 			<div class="item item-divider">
 				名医联盟推荐医生
 			</div>
-			<a class="item item-thumbnail-left" href="#" ng-repeat="item in recommendDoctorArr">
+			<a class="item item-thumbnail-left" href="#/tab/home/doctor-list/doctor-details" ng-repeat="item in recommendDoctorArr">
 				<img src="../img/ben.png">
 				<h2>{{item.name}}<span>{{item.hospital_department_name+'&nbsp;'+item.job_title}}</span></h2>
 				<h4>{{item.hospital_name}}</h4>
