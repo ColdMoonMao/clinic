@@ -73,14 +73,47 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
 			controller: 'ForgetPasswordCtrl',
 			templateUrl: 'templates/forget-password.html'
 		})
-		// Each tab has its own nav history stack:
 
+	// Each tab has its own nav history stack:
 	.state('tab.home', {
 		url: '/home',
 		views: {
 			'tab-home': {
 				templateUrl: 'templates/tab-home.html',
 				controller: 'HomeCtrl'
+			}
+		}
+	})
+
+	//诊室列表
+	.state('tab.clinicList', {
+		url: '/home/clinic-list',
+		views: {
+			'tab-home': {
+				templateUrl: 'templates/clinic-list.html',
+				controller: 'ClinicListCtrl'
+			}
+		}
+	})
+
+	//诊室详情
+	.state('tab.clinicDetail', {
+		url: '/home/clinic/:clinicId',
+		views: {
+			'tab-home': {
+				templateUrl: 'templates/clinic-detail.html',
+				controller: 'ClinicDetailCtrl'
+			}
+		}
+	})
+
+	//诊室地图
+	.state('tab.clinicMap', {
+		url: '/home/clinic/:clinicId/map',
+		views: {
+			'tab-home': {
+				templateUrl: 'templates/clinic-map.html',
+				controller: 'ClinicMapCtrl'
 			}
 		}
 	})
@@ -127,68 +160,68 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
 		})
 
 
-   //个人中心
-  .state('tab.personalCenter', {
-    url: '/personal-center',
-    views: {
-      'tab-personal-center': {
-        templateUrl: 'templates/personal-center.html',
-        controller: 'PersonalCenterCtrl'
-      }
-    }
-  })
-    //个人信息
-    .state('tab.personalInformation', {
-      url: '/personal-center/personal-information',
-      views: {
-        'tab-personal-center': {
-          templateUrl: 'templates/personal-information.html',
-          controller: 'PersonalInformationCtrl'
-        }
-      }
-    })
+	//个人中心
+	.state('tab.personalCenter', {
+			url: '/personal-center',
+			views: {
+				'tab-personal-center': {
+					templateUrl: 'templates/personal-center.html',
+					controller: 'PersonalCenterCtrl'
+				}
+			}
+		})
+		//个人信息
+		.state('tab.personalInformation', {
+			url: '/personal-center/personal-information',
+			views: {
+				'tab-personal-center': {
+					templateUrl: 'templates/personal-information.html',
+					controller: 'PersonalInformationCtrl'
+				}
+			}
+		})
 
-    //我的预约
-    .state('tab.myOrder', {
-      url: '/personal-center/my-order',
-      views: {
-        'tab-personal-center': {
-          templateUrl: 'templates/my-order.html',
-          controller: 'MyOrderCtrl'
-        }
-      }
-    })
+	//我的预约
+	.state('tab.myOrder', {
+		url: '/personal-center/my-order',
+		views: {
+			'tab-personal-center': {
+				templateUrl: 'templates/my-order.html',
+				controller: 'MyOrderCtrl'
+			}
+		}
+	})
 
-    //家庭联系人
-    .state('tab.householdContacts', {
-      url: '/personal-center/household-contacts',
-      views: {
-        'tab-personal-center': {
-          templateUrl: 'templates/household-contacts.html',
-          controller: 'HouseholdContactsCtrl'
-        }
-      }
-    })
-    //添加联系人
-    .state('tab.addMan', {
-      url: '/personal-center/add-man',
-      views: {
-        'tab-personal-center': {
-          templateUrl: 'templates/add-man.html',
-          controller: 'AddManCtrl'
-        }
-      }
-    })
-    //修改联系人
-    .state('tab.alterMan', {
-      url: '/personal-center/alter-man',
-      views: {
-        'tab-personal-center': {
-          templateUrl: 'templates/alter-man.html',
-          controller: 'AlterManCtrl'
-        }
-      }
-    });
+	//家庭联系人
+	.state('tab.householdContacts', {
+			url: '/personal-center/household-contacts',
+			views: {
+				'tab-personal-center': {
+					templateUrl: 'templates/household-contacts.html',
+					controller: 'HouseholdContactsCtrl'
+				}
+			}
+		})
+		//添加联系人
+		.state('tab.addMan', {
+			url: '/personal-center/add-man',
+			views: {
+				'tab-personal-center': {
+					templateUrl: 'templates/add-man.html',
+					controller: 'AddManCtrl'
+				}
+			}
+		})
+		//修改联系人
+		.state('tab.alterMan', {
+			url: '/personal-center/alter-man',
+			views: {
+				'tab-personal-center': {
+					templateUrl: 'templates/alter-man.html',
+					controller: 'AlterManCtrl'
+				}
+			}
+		});
 
 
 

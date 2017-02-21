@@ -1,0 +1,46 @@
+<ion-view view-title="诊室" hide-tabs="true">
+	<ion-content class="clinic-detail">
+		<img ng-src="{{clinicDetailObj.pic_url}}">
+		<!-- <<<主信息 -->
+		<div class="list main">
+			<a class="item">
+				<h2>{{clinicDetailObj.name}}</h2>
+				<i class="icon ion-checkmark-circled"></i><span>三甲名医出诊</span>
+				<i class="icon ion-checkmark-circled"></i><span>无过度医疗</span>
+			</a>
+			<a class="item item-icon-left item-icon-right" href="#/tab/home/clinic/{{clinicDetailObj.id}}/map">
+				<i class="icon ion-ios-location-outline left-icon"></i>{{clinicDetailObj.address}}
+				<i class="icon ion-chevron-right right-icon"></i>
+			</a>
+			<a class="item item-icon-left item-icon-right" href="#">
+				<i class="icon ion-ios-telephone-outline left-icon"></i> {{clinicDetailObj.phone}}
+				<i class="icon ion-chevron-right right-icon"></i>
+			</a>
+		</div>
+		<!-- 主信息 >>>>-->
+		<div class="divider"></div>
+		<!-- <<<科室-->
+		<div class="list depart">
+			<div class="item item-divider">
+				科室<span>(点击科室选择医生进行门诊预约)</span>
+			</div>
+			<a class="item item-icon-right" href="#/tab/home/clinic/{{clinicDetailObj.id}}/{{depart.id}}" ng-repeat="depart in clinicDetailObj.specialities">
+				<h2>{{depart.name}}<span>{{depart.doctor_count+'位三甲医生'}}</span></h2>
+				<p>{{depart.description}}</p>
+				<i class="icon ion-chevron-right right-icon"></i>
+			</a>
+		</div>
+		<!--科室>>>>>>>-->
+		<div class="divider"></div>
+		<!-- <<<<诊所介绍 -->
+		<div class="list intro">
+			<div class="item item-divider">
+				诊所介绍
+			</div>
+			<a class="item">
+				<p>爱尔诊所是一家....点击科室选择医生进行门诊预约点击科室选择医生进行门诊预约点击科室选择医生进行门诊预约点击科室选择医生进行门诊预约</p>
+			</a>
+		</div>
+		<!-- 诊所介绍 >>>>>-->
+	</ion-content>
+</ion-view>
