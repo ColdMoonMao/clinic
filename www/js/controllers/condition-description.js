@@ -10,11 +10,6 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
         { text: '<center>从相册中选择</center><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>' }
       ],
       destructiveText: '<center>取消</center>',
-      // titleText: 'Modify your album',
-      // cancelText: '<center>取消</center>',
-      // cancel: function() {
-      //   return false;
-      // },
       buttonClicked: function(index) {
         $scope.imgshow=true;
 
@@ -24,10 +19,14 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
             destinationType: Camera.DestinationType.CAMERA });//(图片源类型)打开相机 还是相册取决于这句
 
           function onSuccess(imageURI) {
+            $scope.imgshow=true;
+
             var image = document.getElementById('photo');
             image.src = imageURI;
           }
           function onFail(message) {
+            $scope.imgshow=false;
+
             alert('Failed because: ' + message);
           }
         } else {
@@ -36,6 +35,7 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
           // var func = createNewFileEntry;
 
           navigator.camera.getPicture(function cameraSuccess(imageUri) {
+            $scope.imgshow=true;
 
             var image = document.getElementById('photo');
             image.src = imageUri;
@@ -43,6 +43,8 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
             // func(imageUri);
 
           }, function cameraError(error) {
+            $scope.imgshow=false;
+
             console.debug("Unable to obtain picture: " + error, "app");
 
           },options);
@@ -65,6 +67,7 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
         return true;
       },
       destructiveButtonClicked:function () {
+
         return true;
       }
     });
@@ -80,11 +83,6 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
         { text: '<center>蒋一龙</center><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>' }
       ],
       destructiveText: '<center>取消</center>',
-      // titleText: 'Modify your album',
-      // cancelText: 'Cancel',
-      // cancel: function() {
-      //   // add cancel code..
-      // },
       buttonClicked:function () {
         return true;
       },
