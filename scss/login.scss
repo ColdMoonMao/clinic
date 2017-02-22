@@ -1,7 +1,8 @@
 .login {
+	height: 100%;
 	.logo {
-		width: 100px;
-		margin: 10px auto 100px auto;
+		width: 90px;
+		margin: 10px auto 20% auto;
 		display: block;
 	}
 	input {
@@ -15,7 +16,7 @@
 		font-weight: bold;
 	}
 	.row {
-		margin-bottom: 100px;
+		margin-bottom: 20%;
 		a {
 			color: #BBB;
 		}
@@ -27,9 +28,14 @@
 		text-align: right;
 	}
 	.bgi {
+		position: absolute;
 		margin: 0 -10px -10px -10px;
+		bottom: -1px;
+		width:100%;
+		height:25%;
 		img {
 			width: 100%;
+			height:100%;
 		}
 	}
 }
