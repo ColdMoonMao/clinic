@@ -4,10 +4,10 @@
     <div class="list">
 
       <a class="item item-thumbnail-left item-icon-right" ng-repeat="doctor in doctorArr" ng-click="toDoctorDetails($index)">
-        <img ng-src="{{doctor.img}}">
+        <img ng-src="{{doctor.head_url}}">
         <h2>{{doctor.name}}</h2>
-        <h4>{{doctor.hospital}}</h4>
-        <p>{{doctor.description}}</p>
+        <h4>{{doctor.hospital_name}}</h4>
+        <p style="white-space: normal">{{doctor.speciality_name+'专业,  擅长治疗'+doctor.introducation}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </a>
     </div>
