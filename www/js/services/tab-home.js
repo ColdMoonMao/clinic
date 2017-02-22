@@ -5,7 +5,7 @@ angular.module('app.services')
 				getRecommend: function(params) {
 					var deferred = $q.defer();
 					$http({
-						method: 'POST',
+						method: 'GET',
 						url: GlobalConfig.url.api.doctor.recommend,
 						params: params,
 						responseType: 'json',
