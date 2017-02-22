@@ -9,7 +9,7 @@ angular.module('app.controllers').controller('DoctorDetailsCtrl', ['$scope','$st
 		description: '口腔修复专业,擅长(贴面,牙齿美白,贴面,牙齿美白,贴面,牙齿美白,贴面,牙齿美白,贴面,牙齿美白,)'
 	};
 
-	$scope.submitReservation=function () {
+	$scope.toReservation=function () {
 	  console.log('111');
     $state.go('tab.conditionDescription');
   }

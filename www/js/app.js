@@ -118,6 +118,18 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
         }
       })
 
+      //支付
+      .state('tab.pay', {
+        url: '/home/doctor-list/doctor-details/condition-description/pay',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/pay.html',
+            controller: 'PayCtrl'
+          }
+        }
+      })
+
+
       //我的服务
       .state('tab.serves', {
         url: '/serves',
