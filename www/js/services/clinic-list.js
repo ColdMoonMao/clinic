@@ -1,12 +1,12 @@
-// HOME页面服务
+// CLINICLIST页面服务
 angular.module('app.services')
-	.factory('HomeServe', ['$http','$q',function($http, $q) {
+	.factory('ClinicListServe', ['$http','$q',function($http, $q) {
 			return {
-				getRecommend: function(params) {
+				list: function(params) {
 					var deferred = $q.defer();
 					$http({
 						method: 'GET',
-						url: GlobalConfig.url.api.doctor.recommend,
+						url: GlobalConfig.url.api.hospital.show,
 						params: params,
 						responseType: 'json',
 						timeout: 30000

@@ -64,7 +64,7 @@
 				名医联盟推荐医生
 			</div>
 			<a class="item item-thumbnail-left" href="#/tab/home/doctor-list/doctor-details" ng-repeat="item in recommendDoctorArr">
-				<img src="../img/ben.png">
+				<img ng-src="{{item.head_url}}">
 				<h2>{{item.name}}<span>{{item.hospital_department_name+'&nbsp;'+item.job_title}}</span></h2>
 				<h4>{{item.hospital_name}}</h4>
 				<p>{{item.introducation}}</p>
