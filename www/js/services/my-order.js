@@ -2,7 +2,7 @@
 angular.module('app.services')
 	.factory('MyOrderServe', ['$http','$q',function($http, $q) {
 			return {
-				myOrder: function(params) {
+        unpaid: function(params) {
 					var deferred = $q.defer();
 					$http({
 						method: 'GET',
@@ -17,5 +17,20 @@ angular.module('app.services')
 					});
 					return deferred.promise;
 				},
+        paid: function(params) {
+          var deferred = $q.defer();
+          $http({
+            method: 'GET',
+            url: GlobalConfig.url.api.order.normalUserPaid,
+            params: params,
+            responseType: 'json',
+            timeout: 30000
+          }).then(function(data) {
+            deferred.resolve(data);
+          }, function(error) {
+            deferred.reject(error);
+          });
+          return deferred.promise;
+        },
 			};
 		}]);

@@ -5,13 +5,22 @@ angular.module('app.controllers')
   .controller('MyOrderCtrl', ['$scope','MyOrderServe', function($scope,MyOrderServe) {
     $scope.noPay = {
       token: sessionStorage.getItem('token'),         //	令牌
-      normalUserId: sessionStorage.getItem('userId'), //	用户id
+      normal_user_id: sessionStorage.getItem('userId'), //	用户id
       page: 1,       //	页码, 默认1
       count: 20,       //	个数, 默认20
     };
-    $scope.noPayOrders=[];
+    // $scope.noPayOrders=[];
     $scope.onNoPay=function () {
-      MyOrderServe.myOrder($scope.noPay)
+      MyOrderServe.unpaid($scope.noPay)
+        .then(function (data) {
+          console.log(data,'success');
+          $scope.noPayOrders=data.data.result;
+        },function (er) {
+          console.log(er,'error');
+        })
+    }
+    $scope.onPay=function () {
+      MyOrderServe.paid($scope.noPay)
         .then(function (data) {
           console.log(data,'success');
           $scope.noPayOrders=data.data.result;
@@ -20,6 +29,7 @@ angular.module('app.controllers')
         })
     }
     $scope.onNoPay()
+    $scope.onPay()
     // $scope.noPayOrders=[
     //   {
     //     contant: '2016-12-02 11:25 邓超',
