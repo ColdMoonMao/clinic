@@ -6,15 +6,10 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
   $scope.uploadPhoto=function () {
     $ionicActionSheet.show({
       buttons: [
-        { text: '<center>拍照</center>' },
-        { text: '<center>从相册中选择</center>' }
+        { text: '<center>拍照</center><hr/>' },
+        { text: '<center>从相册中选择</center><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>' }
       ],
       destructiveText: '<center>取消</center>',
-      // titleText: 'Modify your album',
-      // cancelText: 'Cancel',
-      // cancel: function() {
-      //   // add cancel code..
-      // },
       buttonClicked: function(index) {
         $scope.imgshow=true;
 
@@ -24,10 +19,14 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
             destinationType: Camera.DestinationType.CAMERA });//(图片源类型)打开相机 还是相册取决于这句
 
           function onSuccess(imageURI) {
+            $scope.imgshow=true;
+
             var image = document.getElementById('photo');
             image.src = imageURI;
           }
           function onFail(message) {
+            $scope.imgshow=false;
+
             alert('Failed because: ' + message);
           }
         } else {
@@ -36,6 +35,7 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
           // var func = createNewFileEntry;
 
           navigator.camera.getPicture(function cameraSuccess(imageUri) {
+            $scope.imgshow=true;
 
             var image = document.getElementById('photo');
             image.src = imageUri;
@@ -43,6 +43,8 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
             // func(imageUri);
 
           }, function cameraError(error) {
+            $scope.imgshow=false;
+
             console.debug("Unable to obtain picture: " + error, "app");
 
           },options);
@@ -65,6 +67,7 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
         return true;
       },
       destructiveButtonClicked:function () {
+
         return true;
       }
     });
@@ -72,19 +75,14 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
   $scope.choosePeople=function () {
     $ionicActionSheet.show({
       buttons: [
-        { text: '<center>王恺</center>' },
-        { text: '<center>刘栋</center>' },
-        { text: '<center>毛豪庆</center>' },
-        { text: '<center>王强</center>' },
-        { text: '<center>仙蒙</center>' },
-        { text: '<center>蒋一龙</center>' }
+        { text: '<center>王恺</center><hr/>' },
+        { text: '<center>刘栋</center><hr/>' },
+        { text: '<center>毛豪庆</center><hr/>' },
+        { text: '<center>王强</center><hr/>' },
+        { text: '<center>仙蒙</center><hr/>' },
+        { text: '<center>蒋一龙</center><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>' }
       ],
       destructiveText: '<center>取消</center>',
-      // titleText: 'Modify your album',
-      // cancelText: 'Cancel',
-      // cancel: function() {
-      //   // add cancel code..
-      // },
       buttonClicked:function () {
         return true;
       },
