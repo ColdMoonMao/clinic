@@ -1,0 +1,32 @@
+.clinic-list {
+	span {
+		display: inline-block;
+		margin-left: 15px;
+		color: #666;
+		font-size: 14px;
+		font-weight: normal;
+	}
+	h2 {
+		line-height: 1.8;
+		font-weight: bold;
+	}
+	h3 {
+		line-height: 1.8;
+	}
+	button{
+		background-color: #60bdf8;
+		border:none;
+		color:$light;
+		border-radius: 5px;
+		padding: 4px 9px;
+	}
+	i{
+		font-size: 150%;
+		margin-right: 5px;
+	}
+	p {
+		margin-top: 10px;
+		// white-space: normal;
+
+	}
+}

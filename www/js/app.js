@@ -85,6 +85,39 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
         }
       })
 
+      //诊室列表
+      .state('tab.clinicList', {
+        url: '/home/clinic-list',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/clinic-list.html',
+            controller: 'ClinicListCtrl'
+          }
+        }
+      })
+
+      //诊室详情
+      .state('tab.clinicDetail', {
+        url: '/home/clinic/:clinicId',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/clinic-detail.html',
+            controller: 'ClinicDetailCtrl'
+          }
+        }
+      })
+
+      //诊室地图
+      .state('tab.clinicMap', {
+        url: '/home/clinic/:clinicId/map',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/clinic-map.html',
+            controller: 'ClinicMapCtrl'
+          }
+        }
+      })
+
       //医生列表
       .state('tab.doctorList', {
         url: '/home/doctor-list',

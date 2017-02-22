@@ -1,0 +1,14 @@
+<ion-view view-title="诊室列表" hide-tabs="true">
+	<ion-content class="clinic-list">
+		<!-- <<<诊室列表-->
+		<div class="list">
+			<a class="item item-thumbnail-left" href="#/tab/home/clinic/{{clinic.id}}" ng-repeat="clinic in clinicArr">
+				<img ng-src="{{clinic.pic_url}}">
+				<h2>{{clinic.name}}<span>{{clinic.doctor_count+'位三甲医生'}}</span></h2>
+				<div><button class="">{{clinic.departments[0].name}}</button></div>
+				<p><i class="icon ion-ios-location-outline"></i>{{clinic.address}}</p>
+			</a>
+		</div>
+		<!--诊室列表>>>>>>>-->
+	</ion-content>
+</ion-view>
