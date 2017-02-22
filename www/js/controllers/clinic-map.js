@@ -6,7 +6,7 @@ angular.module('app.controllers')
 		var map = new AMap.Map('container', {
 			resizeEnable: true,
 			zoom: 12,
-			center: [108.916, 34.2179]
+			center: [108.956, 34.2779]
 		});
 		var marker = new AMap.Marker({
 			position: [108.956, 34.2779]

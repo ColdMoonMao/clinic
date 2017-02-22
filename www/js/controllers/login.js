@@ -1,9 +1,18 @@
-/**
- * Created by a1 on 2017/2/18.
- */
-angular.module('app.controllers').controller('LoginCtrl', ['$scope', '$state', function($scope, $state) {
+angular.module('app.controllers').controller('LoginCtrl', ['$scope', '$state','LoginServe', function($scope, $state,LoginServe) {
+	$scope.loginObj = {
+		username: '', //string	y	用户名,
+		password: '', //string	y	密码,
+	};
 	$scope.onLogin = function() {
-		$state.go('tab.home');
+		LoginServe.login($scope.loginObj)
+			.then(function(data) {
+				console.log(data, 'success');
+				sessionStorage.setItem('token', data.data.result.token);
+				sessionStorage.setItem('userId', data.data.result.id);
+				$state.go('tab.home');
+			}, function(er) {
+				console.log(er, 'error');
+			})
 	}
 	$scope.onForgotPW = function() {
 		console.log(1);
