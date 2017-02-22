@@ -8,13 +8,17 @@ angular.module('app.controllers').controller('ForgetPasswordCtrl', ['$scope', '$
 		ChangePasswordServe.changePassword($scope.changePasswordObj)
 			.then(function(data) {
 				console.log(data, 'success');
+			}, function(er) {
+				console.log(er, 'er');
+			})
+	}
+	$scope.onGetCode = function() {
+		console.log($scope.changePasswordObj.username);
+		ChangePasswordServe.sms_code({ phone: $scope.changePasswordObj.username })
+			.then(function(data) {
+				console.log(data, 'success');
 				$scope.clinicDetailObj = data.data.result;
-				$rootScope.clinicMapParams = {
-					longitude: $scope.clinicDetailObj.longitude,
-					latitude: $scope.clinicDetailObj.latitude,
-					name: $scope.clinicDetailObj.name,
-					address: $scope.clinicDetailObj.address
-				}
+				// $scope.changePasswordObj.sms_code=;
 			}, function(er) {
 				console.log(er, 'er');
 			})
