@@ -6,14 +6,14 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
   $scope.uploadPhoto=function () {
     $ionicActionSheet.show({
       buttons: [
-        { text: '<center>拍照</center>' },
-        { text: '<center>从相册中选择</center>' }
+        { text: '<center>拍照</center><hr/>' },
+        { text: '<center>从相册中选择</center><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>' }
       ],
       destructiveText: '<center>取消</center>',
       // titleText: 'Modify your album',
-      // cancelText: 'Cancel',
+      // cancelText: '<center>取消</center>',
       // cancel: function() {
-      //   // add cancel code..
+      //   return false;
       // },
       buttonClicked: function(index) {
         $scope.imgshow=true;
@@ -72,12 +72,12 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
   $scope.choosePeople=function () {
     $ionicActionSheet.show({
       buttons: [
-        { text: '<center>王恺</center>' },
-        { text: '<center>刘栋</center>' },
-        { text: '<center>毛豪庆</center>' },
-        { text: '<center>王强</center>' },
-        { text: '<center>仙蒙</center>' },
-        { text: '<center>蒋一龙</center>' }
+        { text: '<center>王恺</center><hr/>' },
+        { text: '<center>刘栋</center><hr/>' },
+        { text: '<center>毛豪庆</center><hr/>' },
+        { text: '<center>王强</center><hr/>' },
+        { text: '<center>仙蒙</center><hr/>' },
+        { text: '<center>蒋一龙</center><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>' }
       ],
       destructiveText: '<center>取消</center>',
       // titleText: 'Modify your album',

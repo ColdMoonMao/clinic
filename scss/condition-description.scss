@@ -13,3 +13,22 @@ ul{
     }
   }
 }
+
+//disable状态时设置颜色
+.checkbox input:disabled:checked:before, .checkbox input:disabled:checked + .checkbox-icon:before {
+  background: #387ef5;
+  border-color: #387ef5;
+  border-width: 2px;
+}
+
+.checkbox input:disabled:before, .checkbox input:disabled + .checkbox-icon:before {
+  border-color: #387ef5;
+  border-width: 2px;
+}
+
+
+hr{
+  margin: -1px;padding: 0px;
+}
+
+
