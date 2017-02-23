@@ -9,7 +9,7 @@ angular.module('app.services')
         var deferred = $q.defer();
         $http({
           method: 'GET',
-          url: GlobalConfig.url.api.patient.show,
+          url: GlobalConfig.url.api.user.show,
           params: params,
           responseType: 'json',
           timeout: 30000

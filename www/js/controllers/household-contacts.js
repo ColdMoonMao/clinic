@@ -18,7 +18,7 @@ angular.module('app.controllers')
       Contacts.information($scope.contact)
         .then(function (data) {
           console.log(data,'success');
-          $scope.peopleArr=data.data.result;
+          $scope.peopleArr=data.data.result.patients;
         },function (er) {
           console.log(er,'error');
         })

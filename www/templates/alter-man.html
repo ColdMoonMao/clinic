@@ -3,26 +3,26 @@
     <div class="list card">
         <label class="row item ">
           <div class="col col-33">姓名</div>
-          <div class="col">邓超</div>
+          <input class="col" ng-model="updateList.name">
         </label>
       <label class="row item">
         <div class="col col-33">身份证</div>
-        <div class="col">610112198312282512</div>
+        <input class="col" ng-model="updateList.identity_card">
       </label>
 
       <label class="row item">
         <span class="col col-33">性别</span>
         <label ng-repeat="item in sex">
-          <ion-radio  ng-model="data.value" ng-value="item.value">{{item.text}}</ion-radio>
+          <ion-radio  ng-model="sexValue.value" ng-value="item.value">{{item.text}}</ion-radio>
         </label>
       </label>
       <label class="row item">
         <div class="col col-33">联系电话</div>
-        <div class="col">13572229938</div>
+        <input class="col" ng-model="updateList.phone">
       </label>
       <label class="row item">
         <div class="col col-33">地址</div>
-        <div class="col">延安</div>
+        <input class="col" ng-model="updateList.address">
       </label>
       </div>
 
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="padding">
-      <button class="button button-block button-positive" ng-click="onAddManButtonClick()">保存</button>
+      <button class="button button-block button-positive" ng-click="onAlterManButtonClick()">保存</button>
       <button class="button button-block button-assertive" ng-click="onDeleteManButtonClick()">删除</button>
     </div>
   </ion-content>
