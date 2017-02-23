@@ -6,7 +6,9 @@
 // 'app.services' is found in services.js
 // 'app.controllers' is found in controllers.js
 angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directives', 'app.filters'])
-
+  .constant('$ionicLoadingConfig', {
+  template: '<ion-spinner></ion-spinner>'
+})
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
