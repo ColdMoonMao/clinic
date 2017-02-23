@@ -21,7 +21,13 @@ angular.module('app.controllers')
     };
 
     //数据绑定
-    $scope.personlMessage = null;
+    $scope.personlMessage = [{
+      name: '',
+      gender: '',
+      identity_card: '',
+      address: '',
+    }
+    ];
     //单选框绑定
     $scope.sex = [
       {text: "男", value: "2"},
@@ -48,6 +54,7 @@ angular.module('app.controllers')
     //修改信息
     $scope.onSaveButtonClick = function () {
       $scope.updateList.name=$scope.personlMessage.name,
+        console.log($scope.updateList.name)
       $scope.updateList.gender=$scope.sexValue.value,
       $scope.updateList.identity_card=$scope.personlMessage.identity_card,
       $scope.updateList.address=$scope.personlMessage.address,
