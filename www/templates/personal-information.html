@@ -3,23 +3,23 @@
     <div class="list card">
       <label class="row item">
         <div class="col col-33">姓名</div>
-        <div class="col">陈冬明</div>
+        <input class="col">{{personlMessage.name}}</input>
       </label>
       <label class="row item">
         <div class="col col-33">身份证</div>
-        <div class="col">610112198312282512</div>
+        <input class="col">{{personlMessage.identity_card}}</input>
       </label>
 
       <label class="row item">
         <span class="col col-33">性别</span>
         <label ng-repeat="item in sex">
-          <ion-radio  ng-model="data.value" ng-value="item.value">{{item.text}}</ion-radio>
+          <ion-radio  ng-model="sexValue.value" ng-value="item.value">{{item.text}}</ion-radio>
         </label>
       </label>
 
       <label class="row item">
         <div class="col col-33">地址</div>
-        <div class="col">大寨路</div>
+        <input class="col">{{personlMessage.address}}</input>
       </label>
     </div>
 

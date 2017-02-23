@@ -6,13 +6,13 @@
   </ion-nav-buttons>
   <ion-content class="padding appHousehold">
     <div class="list">
-        <a class="item" ng-repeat="peopele in peopleArr" ng-click="changePage()">
+        <a class="item" ng-repeat="peopele in peopleArr" ng-click="changePage($index)">
           <h3>{{peopele.name}}</h3>
           <p><i class="ion-ios-telephone-outline"></i>
             {{peopele.phone}}</p>
 
           <p><i class="ion-ios-location-outline"></i>
-            {{peopele.place}}</p>
+            {{peopele.address}}</p>
         </a>
       </div>
 
