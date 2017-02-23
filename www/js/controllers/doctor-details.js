@@ -82,6 +82,8 @@ angular.module('app.controllers').controller('DoctorDetailsCtrl', ['$scope', '$s
             $scope.CurrentArr[index].isCurrent = true;
             //取得日期
             $scope.choosedDate = $scope.dateArr[index].date;
+            $scope.isSubmit = false;
+
           }
 
           //时间选择变色
