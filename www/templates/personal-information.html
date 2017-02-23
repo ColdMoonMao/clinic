@@ -3,11 +3,11 @@
     <div class="list card">
       <label class="row item">
         <div class="col col-33">姓名</div>
-        <input class="col">{{personlMessage.name}}</input>
+        <input class="col" ng-model="personlMessage.name">
       </label>
       <label class="row item">
         <div class="col col-33">身份证</div>
-        <input class="col">{{personlMessage.identity_card}}</input>
+        <input class="col" ng-model="personlMessage.identity_card">
       </label>
 
       <label class="row item">
@@ -18,8 +18,8 @@
       </label>
 
       <label class="row item">
-        <div class="col col-33">地址</div>
-        <input class="col">{{personlMessage.address}}</input>
+        <div class="col col-33" >地址</div>
+        <input class="col" ng-model="personlMessage.address">
       </label>
     </div>
 
