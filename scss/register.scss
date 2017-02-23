@@ -5,10 +5,18 @@
 		display: block;
 	}
 	.list {
+			z-index: 1;
+		position: relative;
+		
 		.button {
-			background: none;
-			border: none;
+			background-color: #fff;
+			border-color: #fff;
 			padding: 0 15px;
+			position: relative;
+			color:#333;
+		}
+		.button.activated{
+			background-color: #f0f0f0;
 		}
 	}
 	input {

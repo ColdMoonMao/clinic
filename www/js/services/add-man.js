@@ -1,15 +1,15 @@
 /**
  * Created by liudong on 17-2-18.
  */
-//家庭联系人页面服务
+//添加联系人页面服务
 angular.module('app.services')
-  .factory('Contacts', ['$http','$q', function($http,$q) {
+  .factory('AddManServe', ['$http','$q', function($http,$q) {
     return {
-      information: function(params) {
+      addMan: function(params) {
         var deferred = $q.defer();
         $http({
-          method: 'GET',
-          url: GlobalConfig.url.api.patient.show,
+          method: 'POST',
+          url: GlobalConfig.url.api.patient.add,
           params: params,
           responseType: 'json',
           timeout: 30000

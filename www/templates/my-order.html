@@ -21,8 +21,8 @@
       </ion-slide>
 
       <!--已付款-->
-      <ion-slide ion-slide-tab-label="已付款">
-        <ion-content>
+      <ion-slide ion-slide-tab-label="已付款" >
+        <ion-content ng-click="onPay()">
           <div class="list" ng-repeat="item in payOrders">
             <a class="item" href="#">
               <div class="row">

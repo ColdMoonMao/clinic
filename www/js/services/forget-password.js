@@ -1,12 +1,13 @@
-// REGISTER页面服务
+//changePassword
 angular.module('app.services')
-	.factory('RegisterServe', ['$http', '$q', function($http, $q) {
+	.factory('ChangePasswordServe', function($http,$q) {
 		return {
-			register: function(params) {
+			//获取医生列表
+			changePassword: function(params) {
 				var deferred = $q.defer();
 				$http({
 					method: 'POST',
-					url: GlobalConfig.url.api.user.register,
+					url: GlobalConfig.url.api.user.changePassword,
 					params: params,
 					responseType: 'json',
 					timeout: 30000
@@ -21,7 +22,7 @@ angular.module('app.services')
 				var deferred = $q.defer();
 				$http({
 					method: 'GET',
-					url: GlobalConfig.url.api.message.sendRegister,
+					url: GlobalConfig.url.api.message.sendChangePassword,
 					params: params,
 					responseType: 'json',
 					timeout: 30000
@@ -33,4 +34,4 @@ angular.module('app.services')
 				return deferred.promise;
 			}
 		};
-	}]);
+	})
