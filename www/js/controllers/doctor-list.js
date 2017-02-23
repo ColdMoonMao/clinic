@@ -6,7 +6,10 @@ angular.module('app.controllers').controller('DoctorListCtrl',['$scope', '$state
   //获取token
   $scope.token=sessionStorage.getItem('token');
   //获取id
-  console.log($stateParams.departId,$stateParams.clinicId);
+  console.log($stateParams.clinicId,$stateParams.departId);
+  $scope.clinicId=$stateParams.clinicId;
+  $scope.departId=$stateParams.departId;
+
   //上传参数
   $scope.doctorListObj={
     token:$scope.token,
@@ -24,10 +27,5 @@ angular.module('app.controllers').controller('DoctorListCtrl',['$scope', '$state
       alert(error);
     });
 
-
-
-  $scope.toDoctorDetails = function($index) { //$index需要传给下个页面
-    $state.go('tab.doctorDetails');
-  }
 
 }])

@@ -131,7 +131,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'app.directiv
 
       //医生详情
       .state('tab.doctorDetails', {
-        url: '/home/doctor-list/doctor-details',
+        url: '/home/clinic/:clinicId/:departId/:doctorId',
         views: {
           'tab-home': {
             templateUrl: 'templates/doctor-details.html',

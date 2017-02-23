@@ -47,10 +47,6 @@ html body{
       td {
         border: 1px solid gray;
         width: 100%;
-        color: #0c60ee;
-        p{
-          color: #0c60ee;
-        }
       }
     }
   }
@@ -62,4 +58,19 @@ html body{
 
 .address{
   white-space:normal !important;
+}
+
+.yuYue{
+  color: blue !important;
+}
+.noYuYue{
+  color: red !important;
+}
+
+.active{
+  background-color: deepskyblue;
+}
+
+.disableYuYue{
+  background-color: lightgray;
 }

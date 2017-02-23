@@ -3,7 +3,7 @@
 
     <div class="list">
 
-      <a class="item item-thumbnail-left item-icon-right" ng-repeat="doctor in doctorArr" ng-click="toDoctorDetails($index)">
+      <a class="item item-thumbnail-left item-icon-right" ng-repeat="doctor in doctorArr" href="#/tab/home/clinic/{{clinicId}}/{{departId}}/{{doctor.id}}">
         <img ng-src="{{doctor.head_url}}">
         <h2>{{doctor.name}}</h2>
         <h4>{{doctor.hospital_name}}</h4>

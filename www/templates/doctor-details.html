@@ -1,222 +1,178 @@
 <ion-view view-title="医生详情" hide-tabs="true">
 
   <!--医生-->
-  <ion-content >
+  <ion-content>
     <div class="list ">
-      <a class="item item-thumbnail-left  " >
-        <img ng-src="{{doctor.img}}" >
-        <h2 >{{doctor.name}}</h2>
-        <p >{{doctor.hospital}}</p>
-        <p class="description">{{doctor.description}}</p>
+      <a class="item item-thumbnail-left">
+        <img ng-src="{{doctor.head_url}}">
+        <h2>{{doctor.name}}</h2>
+        <p>{{doctor.hospital_name}}</p>
+        <p>{{doctor.big_hospital_department_name+' '}}<span>{{doctor.job_title}}</span></p>
       </a>
     </div>
   </ion-content>
 
 
-    <!--tab贴换-->
-    <!--<ion-content scroll="false" style="margin-top: 100px">-->
-      <!--<div class="tabs-striped tabs-top  ">-->
-        <!--<div class="tabs">-->
-          <!--<a class="tab-item active" href="">预约</a>-->
-          <!--<a class="tab-item" href="">资料</a>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</ion-content>-->
+  <!--tab贴换-->
+  <!--<ion-content scroll="false" style="margin-top: 100px">-->
+  <!--<div class="tabs-striped tabs-top  ">-->
+  <!--<div class="tabs">-->
+  <!--<a class="tab-item active" href="">预约</a>-->
+  <!--<a class="tab-item" href="">资料</a>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</ion-content>-->
 
   <!--slide-box-tab 插件-->
   <ion-content scroll="true" class="slideTab">
-      <ion-slide-box show-pager="false" ion-slide-tabs slide-tabs-scrollable="false" >
+    <ion-slide-box show-pager="false" ion-slide-tabs slide-tabs-scrollable="false">
 
-        <!--预约-->
-        <ion-slide ion-slide-tab-label="预约">
-          <ion-content>
-            <div class="list">
-              <div class="item item-divider address">爱尔诊所后宰门诊室 后宰门130号创之星大厦一单元122(中户)</div>
-            </div>
+      <!--预约-->
+      <ion-slide ion-slide-tab-label="预约">
+        <ion-content>
 
-            <!--日期选择-->
-            <div class="list dateSelect" >
-              <div class="item item-divider">日期选择</div>
-              <div class="item">
-                <ion-slide-box  options="options" slider="data.slider" does-continue="true" auto-play="true" slide-interval=2000 show-pager="false"  >
+          <!--地址-->
+          <div class="list">
+            <div class="item item-divider address">{{doctor.addresses[0].address}}</div>
+          </div>
+
+          <!--日期选择-->
+          <div class="list dateSelect">
+            <div class="item item-divider">日期选择</div>
+            <div class="item">
+              <ion-slide-box show-pager="false">
                 <ion-slide>
-                    <table>
-                      <thead>
-                      <tr class="row">
-                        <td class="col">日期</td>
-                        <td class="col">12.2
-                          <p>周五</p></td>
-                        <td class="col">12.3
-                          <p>周六</p></td>
-                        <td class="col">12.4
-                          <p>周日</p></td>
-                        <td class="col">12.5
-                          <p>周一</p></td>
-                        <td class="col">12.6
-                          <p>周二</p></td>
-                        <td class="col">12.7
-                          <p>周三</p></td>
-                        <td class="col">12.8
-                          <p>周四</p></td>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <tr class="row">
-                        <td class="col" style="color: #0a0608">上午</td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col">坐诊</td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                      </tr>
-                      <tr class="row">
-                        <td class="col" style="color: #0a0608">下午</td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col">坐诊</td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col">坐诊</td>
-                      </tr>
-                      </tbody>
-                    </table>
+                  <table>
+                    <thead>
+                    <tr class="row">
+                      <td class="col">日期</td>
+                      <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
+                          ng-repeat="date in  dateArr | limitTo:7:0" ng-click="chooseDate($index)">{{(date.date |
+                        limitTo:5:6)}}
+                        <p>{{weekArr[$index+todayWeek]}}</p>
+                      </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row">
+                      <td class="col" style="color: #0a0608">上午</td>
+                      <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
+                          ng-repeat="date in  dateArr | limitTo:7:0" ng-click="chooseDate($index)">{{date.am?'坐诊':''}}
+                      </td>
+                    </tr>
+                    <tr class="row">
+                      <td class="col" style="color: #0a0608">下午</td>
+                      <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
+                          ng-repeat="date in  dateArr | limitTo:7:0" ng-click="chooseDate($index)">{{date.pm?'坐诊':''}}
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
                 </ion-slide>
                 <ion-slide>
-                  <div class="item">
-                    <table>
-                      <thead>
-                      <tr class="row">
-                        <td class="col">日期</td>
-                        <td class="col">12.2
-                          <p>周五</p></td>
-                        <td class="col">12.3
-                          <p>周六</p></td>
-                        <td class="col">12.4
-                          <p>周日</p></td>
-                        <td class="col">12.5
-                          <p>周一</p></td>
-                        <td class="col">12.6
-                          <p>周二</p></td>
-                        <td class="col">12.7
-                          <p>周三</p></td>
-                        <td class="col">12.8
-                          <p>周四</p></td>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <tr class="row">
-                        <td class="col" style="color: #0a0608">上午</td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col">坐诊</td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                      </tr>
-                      <tr class="row">
-                        <td class="col" style="color: #0a0608">下午</td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col">坐诊</td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col"></td>
-                        <td class="col">坐诊</td>
-                      </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <table>
+                    <thead>
+                    <tr class="row">
+                      <td class="col">日期</td>
+                      <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
+                          ng-repeat="date in  dateArr | limitTo:7:7" ng-click="chooseDate($index)">{{(date.date |
+                        limitTo:5:6)}}
+                        <p>{{weekArr[$index+todayWeek]}}</p>
+                      </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row">
+                      <td class="col" style="color: #0a0608">上午</td>
+                      <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
+                          ng-repeat="date in  dateArr | limitTo:7:7" ng-click="chooseDate($index)">{{date.am?'坐诊':''}}
+                      </td>
+                    </tr>
+                    <tr class="row">
+                      <td class="col" style="color: #0a0608">下午</td>
+                      <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
+                          ng-repeat="date in  dateArr | limitTo:7:7" ng-click="chooseDate($index)">{{date.pm?'坐诊':''}}
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
                 </ion-slide>
+
               </ion-slide-box>
-              </div>
+            </div>
+          </div>
+
+          <!--上午时间选择-->
+          <div class="list AmTimeSelect">
+            <div class="item item-divider">选择上午时间</div>
+            <div class="item">
+              <table>
+                <tr class="row">
+                  <td
+                    class="col col-25 {{time.count>0?'yuYue':'noYuYue'}} {{time.count>0?'':'disableYuYue'}} {{timeCurrentArr[$index].isCurrent?'active':''}}"
+                    ng-repeat="time in dateArr[index].am_times | limitTo:4:0" ng-click="chooseTime($index)">
+                    {{time.time}}
+                    <p class="{{time.count>0?'yuYue':'noYuYue'}}">{{time.count>0?'余号'+time.count+'个':'不可预约'}}</p></td>
+                </tr>
+                <tr class="row">
+                  <td
+                    class="col col-25 {{time.count>0?'yuYue':'noYuYue'}} {{time.count>0?'':'disableYuYue'}} {{timeCurrentArr[$index+4].isCurrent?'active':''}}"
+                    ng-repeat="time in dateArr[index].am_times | limitTo:4:4" ng-click="chooseTime($index+4)">
+                    {{time.time}}
+                    <p class="{{time.count>0?'yuYue':'noYuYue'}}">{{time.count>0?'余号'+time.count+'个':'不可预约'}}</p></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!--下午时间选择-->
+          <div class="list AmTimeSelect">
+            <div class="item item-divider">选择下午时间</div>
+            <div class="item">
+              <table>
+                <tr class="row">
+                  <td
+                    class="col col-25 {{time.count>0?'yuYue':'noYuYue'}} {{time.count>0?'':'disableYuYue'}} {{timeCurrentArr[$index+8].isCurrent?'active':''}}"
+                    ng-repeat="time in dateArr[index].pm_times | limitTo:4:0" ng-click="chooseTime($index+8)">
+                    {{time.time}}
+                    <p class="{{time.count>0?'yuYue':'noYuYue'}}">{{time.count>0?'余号'+time.count+'个':'不可预约'}}</p></td>
+                </tr>
+                <tr class="row">
+                  <td
+                    class="col col-25 {{time.count>0?'yuYue':'noYuYue'}} {{time.count>0?'':'disableYuYue'}} {{timeCurrentArr[$index+12].isCurrent?'active':''}}"
+                    ng-repeat="time in dateArr[index].pm_times | limitTo:4:4" ng-click="chooseTime($index+12)">
+                    {{time.time}}
+                    <p class="{{time.count>0?'yuYue':'noYuYue'}}">{{time.count>0?'余号'+time.count+'个':'不可预约'}}</p></td>
+                </tr>
+              </table>
             </div>
 
-            <!--上午时间选择-->
-            <div class="list AmTimeSelect" >
-              <div class="item item-divider" >选择上午时间</div>
-              <div class="item">
-                <table>
-                  <tr class="row">
-                    <td class="col col-25" style="color:red">08:00
-                      <p style="color:red">不可预约</p></td>
-                    <td class="col col-25">08:30
-                      <p>余号4个</p></td>
-                    <td class="col col-25">09:00
-                      <p>余号4个</p></td>
-                    <td class="col col-25">09:30
-                      <p>余号4个</p></td>
-                  </tr>
-                  <tr class="row">
-                    <td class="col col-25" style="color:red">08:00
-                      <p style="color:red">不可预约</p></td>
-                    <td class="col col-25">08:30
-                      <p>余号4个</p></td>
-                    <td class="col col-25">09:00
-                      <p>余号4个</p></td>
-                    <td class="col col-25">09:30
-                      <p>余号4个</p></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
+          </div>
+        </ion-content>
+      </ion-slide>
 
-            <!--下午时间选择-->
-            <div class="list AmTimeSelect" >
-              <div class="item item-divider" >选择下午时间</div>
-              <div class="item">
-                <table>
-                  <tr class="row">
-                    <td class="col col-25" style="color:red">14:00
-                      <p style="color:red">不可预约</p></td>
-                    <td class="col col-25">14:30
-                      <p>余号4个</p></td>
-                    <td class="col col-25">15:00
-                      <p>余号4个</p></td>
-                    <td class="col col-25">15:30
-                      <p>余号4个</p></td>
-                  </tr>
-                  <tr class="row">
-                    <td class="col col-25" style="color:red">16:00
-                      <p style="color:red">不可预约</p></td>
-                    <td class="col col-25">16:30
-                      <p>余号4个</p></td>
-                    <td class="col col-25">17:00
-                      <p>余号4个</p></td>
-                    <td class="col col-25">17:30
-                      <p>余号4个</p></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </ion-content>
-        </ion-slide>
-
-        <!--资料-->
-        <ion-slide ion-slide-tab-label="资料">
-          <ion-content scroll="true">
-            <h2>资料</h2>
-          </ion-content>
-        </ion-slide>
+      <!--资料-->
+      <ion-slide ion-slide-tab-label="资料">
+        <ion-content scroll="true">
+          <h2>资料</h2>
+        </ion-content>
+      </ion-slide>
 
     </ion-slide-box>
   </ion-content>
 
   <!--footer提交预约-->
-    <div class="bar bar-footer" style="height: 60px">
+  <div class="bar bar-footer" style="height: 60px">
       <span>
          <div>加急预约</div>
           <p>提前预约享受更多优惠</p>
       </span>
-      <span style="margin-left: 80px">
-        <S>200元</S>
-        <h4 style="color:red">0.01元</h4>
+    <span style="margin-left: 80px">
+        <S>{{dateArr[index].orig_price}}</S>
+        <h4 style="color:red">{{dateArr[index].price}}</h4>
       </span>
-      <button class="button button-balanced pull-right" ng-click="toReservation()">提交预约</button>
-    </div>
+    <button class="button button-balanced pull-right" ng-click="toReservation()">提交预约</button>
+  </div>
 
 
 </ion-view>
