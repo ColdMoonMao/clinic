@@ -26,7 +26,7 @@ GlobalConfig = {
                 normalUserConfirmed:GlobalConfigApiServer.serverUrl+'/api/service/normaluserconfirmed.json',
                 normalUserUnconfirmed:GlobalConfigApiServer.serverUrl+'/api/appointment_service/normal_user_unconfirmed.json',
             },
-            patient:{
+              patient:{
                 show:GlobalConfigApiServer.serverUrl+'/api/patient/normal_user.json',
                 update:GlobalConfigApiServer.serverUrl+'/api/patient/update.json',
                 add:GlobalConfigApiServer.serverUrl+'/api/patient/add.json',

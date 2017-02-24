@@ -137,6 +137,9 @@ angular.module('app.controllers').controller('DoctorDetailsCtrl', ['$scope', '$s
               isCurrent: false
             }]
           $scope.chooseTime = function (num) {
+            $scope.timeCurrentArr.forEach(function (val, number, ele) {
+              val.isCurrent = false;
+            })
             console.log((num < 8) ? $scope.dateArr[$scope.index].am_times[num].count : $scope.dateArr[$scope.index].pm_times[num - 8].count);
             if (((num < 8) ? $scope.dateArr[$scope.index].am_times[num].count : $scope.dateArr[$scope.index].pm_times[num - 8].count) > 0) {
               $scope.timeCurrentArr.forEach(function (val, number, ele) {
@@ -165,9 +168,10 @@ angular.module('app.controllers').controller('DoctorDetailsCtrl', ['$scope', '$s
             if ($scope.isSubmit) {
               console.log('提交');
               sessionStorage.setItem('doctorDetail', JSON.stringify({
+                doctor_name:$scope.doctor.name,
                 doctor_id: $scope.doctor.id,
                 time_type: $scope.time_type,
-                appointment_time: $scope.choosedDate + ' ' + $scope.choosedTime,
+                appointment_time: $scope.choosedDate+' '+$scope.choosedTime,
                 doctor_work_address_id: $scope.doctor.addresses[0].id
               }));
               $state.go('tab.conditionDescription');
