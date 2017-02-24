@@ -23,7 +23,7 @@ GlobalConfig = {
                 getById:GlobalConfigApiServer.serverUrl+'/api/hospital/show.json'
             },
             service:{
-                normalUserConfirmed:GlobalConfigApiServer.serverUrl+'/api/service/normaluserconfirmed.json',
+                normalUserConfirmed:GlobalConfigApiServer.serverUrl+'/api/service/normal_user_confirmed.json',
                 normalUserUnconfirmed:GlobalConfigApiServer.serverUrl+'/api/appointment_service/normal_user_unconfirmed.json',
             },
             patient:{

@@ -8,15 +8,15 @@
           <div class="list" ng-repeat="item in sureList">
             <a class="item"  href="#">
               <div class="row">
-                <img  class="col" src="{{item.img}}">
+                <img  class="col" src="{{item.patient_image_url}}">
                 <div class="col col-75 row">
-                  <h2 class="col">{{item.doctor}}</h2>
-                  <p class="col place">{{item.place}}</p>
+                  <h2 class="col">{{item.patient_name}}</h2>
+                  <p class="col place">{{item.address}}</p>
                 </div>
               </div>
 
                 <p class="col text-center state">{{item.state}}</p>
-                <p class="visit text-center">{{item.time}}</p>
+                <p class="visit text-center">{{item.service_time}}</p>
               <div style="clear: both"></div>
             </a>
           </div>
@@ -27,15 +27,18 @@
       <ion-slide ion-slide-tab-label="待确认">
         <ion-content>
           <div class="list" ng-repeat="item in waitSureList">
-            <a class="item" href="#">
+            <a class="item"  href="#">
               <div class="row">
-                <div class="col">{{item.contant}}</div>
-                <div class="col text-right">{{item.state}}</div>
+                <img  class="col" src="{{item.patient_image_url}}">
+                <div class="col col-75 row">
+                  <h2 class="col">{{item.patient_name}}</h2>
+                  <p class="col place">{{item.address}}</p>
+                </div>
               </div>
-              <div class="row">
-                <div class="col">{{item.doctor}}</div>
-                <div class="col text-right red">{{item.money}}</div>
-              </div>
+
+              <p class="col text-center state">{{item.state}}</p>
+              <p class="visit text-center">{{item.service_time}}</p>
+              <div style="clear: both"></div>
             </a>
           </div>
         </ion-content>
@@ -44,16 +47,19 @@
       <!--待复诊-->
       <ion-slide ion-slide-tab-label="待复诊">
         <ion-content>
-          <div class="list" ng-repeat="item in waitVisitList">
-            <a class="item" href="#">
+          <div class="list" ng-repeat="item in sureList">
+            <a class="item"  href="#">
               <div class="row">
-                <div class="col">{{item.contant}}</div>
-                <div class="col text-right">{{item.state}}</div>
+                <img  class="col" src="{{item.patient_image_url}}">
+                <div class="col col-75 row">
+                  <h2 class="col">{{item.patient_name}}</h2>
+                  <p class="col place">{{item.address}}</p>
+                </div>
               </div>
-              <div class="row">
-                <div class="col">{{item.doctor}}</div>
-                <div class="col text-right red">{{item.money}}</div>
-              </div>
+
+              <p class="col text-center state">{{item.state}}</p>
+              <p class="visit text-center">{{item.service_time}}</p>
+              <div style="clear: both"></div>
             </a>
           </div>
         </ion-content>
@@ -63,15 +69,18 @@
       <ion-slide ion-slide-tab-label="待支付">
         <ion-content>
           <div class="list" ng-repeat="item in waitPayList">
-            <a class="item" href="#">
+            <a class="item"  href="#">
               <div class="row">
-                <div class="col">{{item.contant}}</div>
-                <div class="col text-right">{{item.state}}</div>
+                <img  class="col" src="{{item.patient_image_url}}">
+                <div class="col col-75 row">
+                  <h2 class="col">{{item.patient_name}}</h2>
+                  <p class="col place">{{item.address}}</p>
+                </div>
               </div>
-              <div class="row">
-                <div class="col">{{item.doctor}}</div>
-                <div class="col text-right red">{{item.money}}</div>
-              </div>
+
+              <p class="col text-center state">{{item.state}}</p>
+              <p class="visit text-center">{{item.service_time}}</p>
+              <div style="clear: both"></div>
             </a>
           </div>
         </ion-content>
