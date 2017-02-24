@@ -31,6 +31,8 @@ angular.module('app.controllers')
         .then(function (data) {
           console.log(data, 'success');
           //添加成功弹窗
+          $scope.addList=[];
+          $state.go('tab.householdContacts')
         }, function (er) {
           console.log(er, 'error');
         })
