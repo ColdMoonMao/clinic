@@ -13,8 +13,8 @@ angular.module('app.controllers').controller('DoctorListCtrl',['$scope', '$state
   //上传参数
   $scope.doctorListObj={
     token:$scope.token,
-    hospital_id:$stateParams.departId,
-    speciality_id:$stateParams.clinicId,
+    hospital_id:$stateParams.clinicId,
+    speciality_id:$stateParams.departId,
     page:1,
     count:20
   }
