@@ -30,7 +30,7 @@
     </ul>
 
     <!--进度说明-->
-    <div class="item item-divider row" style="width: 100%;">
+    <div class="item row" style="width: 100%;">
       <span class="col col-20" style="text-align:center">病情描述</span>
       <span class="col col-25" style="text-align:center">支付</span>
       <span class="col col-35" style="text-align:center">平台确认</span>
@@ -42,20 +42,20 @@
 
     <!--预约信息-->
     <div class="list">
-      <div class="item">孙医生(工号007)口腔科加急门诊预约<span>0.01元</span></div>
-      <div class="item">预约时间:</div>
-      <div class="item">就诊地点:</div>
-      <div class="item">病情描述:</div>
+      <div class="item item-divider row"><span class="col">{{doctorDetailObj.doctor_name}}</span><span class="col">{{doctorDetailObj.hospital_department_name}}</span><span class="col">{{doctorDetailObj.time_type==1?'普通':doctorDetailObj.time_type==2?'加急':'实时'}}门诊预约</span><span style="color: red" class="col">{{doctorDetailObj.price}}元</span></div>
+      <div class="item">预约时间:{{doctorDetailObj.appointment_time}}</div>
+      <div class="item">就诊地点:{{doctorDetailObj.address}}</div>
+      <div class="item">病情描述:{{patient_condition}}</div>
       <div class="item item-divider">请选择支付方式</div>
 
       <!--支付选择-->
-      <ion-radio class="item item-divider item-avatar-left" ng-init="cerrentChecked.value=payArr[0].payMetherd" ng-repeat=" pay in payArr" ng-model="cerrentChecked.value" ng-value="pay.payMetherd" ng-change="payMetherdChange(pay)">
+      <ion-radio class="item item-divider item-avatar-left" ng-init="cerrentChecked.id=payArr[0].id" ng-repeat=" pay in payArr" ng-model="cerrentChecked.id" ng-value="pay.id">
         <img src="{{pay.img}}" style="height: 60%"/>
         <h2>{{pay.payMetherd}}</h2>
         <p>{{pay.description}}</p>
       </ion-radio>
-      <!--{{'当前选择的是:'+cerrentChecked.value}}-->
-      <!--ng-model绑定的是radio的ng-value值,不是一个obj对象,但ng-model需要是一个对象里面的属性名-->
+      <span>当前选择的是:<span style="color: blue">{{cerrentChecked.id}}</span></span>
+      <!--ng-model绑定的是radio的ng-value值,不是一个obj对象,但ng-model需要是一个对象里面的属性名;当前用cerrentChecked.value绑定了 ng-value 的值(pay.id)-->
 
       <div class="list list-inset">
         <button class="button button-block button-positive" ng-click="submitPay()">确定支付</button>

@@ -114,7 +114,7 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
 
 
   //获取本地参数
-//获取上页选择并传的值
+  //获取上页选择并传的值
   $scope.doctorDetail=JSON.parse(sessionStorage.getItem('doctorDetail'));
   //上传病情描述
   $scope.ConditionObj={
@@ -125,21 +125,19 @@ angular.module('app.controllers').controller('ConditionDescriptionCtrl',['$scope
     patient_id:'',
     doctor_work_address_id:$scope.doctorDetail.doctor_work_address_id,
     appointment_time:$scope.doctorDetail.appointment_time,
-    // patient_condition:$scope.descriptionTexts
-  }
-
-$scope.submitAppointment=function () {
-  console.log($scope.descriptionTexts);
-
+    patient_condition:''
+  };
+  //调接口
+  $scope.submitAppointment=function () {
   ConditionDescriptionServe.ConditionDescription($scope.ConditionObj)
     .then(function (data) {
       console.log('上传成功'+data);
     },function (error) {
-      alert(error);
+      // alert(error);
     });
 
   //给下页传值
-
+  sessionStorage.setItem('descriptionTexts',$scope.ConditionObj.patient_condition);
   //跳转
   $state.go('tab.pay');
 }

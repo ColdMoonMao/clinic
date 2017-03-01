@@ -44,7 +44,7 @@
     <div class="list list-inset">
       <div class="item">{{doctorDetail.doctor_name}}<span>{{doctorDetail.appointment_time}}</span></div>
       <div class="item item-divider">病情描述</div>
-      <div class="item"><textarea style="resize: none" ng-model="descriptionTexts" placeholder="请描述你的病情..."></textarea></div>
+      <div class="item"><textarea ng-model="ConditionObj.patient_condition" style="resize: none"  placeholder="请描述你的病情..."></textarea></div>
       <div class="item item-divider">病情图片</div>
       <div class="item item-icon-right" ng-click="uploadPhoto()">上传图片
         <i class="icon ion-chevron-right icon-accessory"></i>

@@ -65,7 +65,26 @@ angular.module('app.controllers').controller('DoctorDetailsCtrl', ['$scope', '$s
             },
             {
               isCurrent: false
-            }];
+            },
+            {
+              isCurrent: false
+            },
+            {
+              isCurrent: false
+            },
+            {
+              isCurrent: false
+            },
+            {
+              isCurrent: false
+            },
+            {
+              isCurrent: false
+            },
+            {
+              isCurrent: false
+            }
+            ];
           $scope.index = 0;
           $scope.choosedDate = $scope.dateArr[0].date;
           $scope.chooseDate = function (index) {
@@ -170,7 +189,10 @@ angular.module('app.controllers').controller('DoctorDetailsCtrl', ['$scope', '$s
               sessionStorage.setItem('doctorDetail', JSON.stringify({
                 doctor_name:$scope.doctor.name,
                 doctor_id: $scope.doctor.id,
+                hospital_department_name:$scope.doctor.hospital_department_name,
+                address:$scope.doctor.addresses[0].address,
                 time_type: $scope.time_type,
+                price:$scope.dateArr[$scope.index].price,
                 appointment_time: $scope.choosedDate+' '+$scope.choosedTime,
                 doctor_work_address_id: $scope.doctor.addresses[0].id
               }));

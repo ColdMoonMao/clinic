@@ -24,7 +24,7 @@
   <!--</ion-content>-->
 
   <!--slide-box-tab 插件-->
-  <ion-content scroll="true" class="slideTab">
+  <ion-content scroll="false" class="slideTab">
     <ion-slide-box show-pager="false" ion-slide-tabs slide-tabs-scrollable="false">
 
       <!--预约-->
@@ -47,8 +47,7 @@
                     <tr class="row">
                       <td class="col">日期</td>
                       <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
-                          ng-repeat="date in  dateArr | limitTo:7:0" ng-click="chooseDate($index)">{{(date.date |
-                        limitTo:5:6)}}
+                          ng-repeat="date in  dateArr | limitTo:7:0" ng-click="chooseDate($index)">{{(date.date | limitTo:5:6)}}
                         <p>{{weekArr[$index+todayWeek]}}</p>
                       </td>
                     </tr>
@@ -74,9 +73,8 @@
                     <thead>
                     <tr class="row">
                       <td class="col">日期</td>
-                      <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
-                          ng-repeat="date in  dateArr | limitTo:7:7" ng-click="chooseDate($index)">{{(date.date |
-                        limitTo:5:6)}}
+                      <td class="col {{CurrentArr[$index+7].isCurrent?'active':''}}"
+                          ng-repeat="date in  dateArr | limitTo:7:7" ng-click="chooseDate($index+7)">{{(date.date | limitTo:5:6)}}
                         <p>{{weekArr[$index+todayWeek]}}</p>
                       </td>
                     </tr>
@@ -84,14 +82,14 @@
                     <tbody>
                     <tr class="row">
                       <td class="col" style="color: #0a0608">上午</td>
-                      <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
-                          ng-repeat="date in  dateArr | limitTo:7:7" ng-click="chooseDate($index)">{{date.am?'坐诊':''}}
+                      <td class="col {{CurrentArr[$index+7].isCurrent?'active':''}}"
+                          ng-repeat="date in  dateArr | limitTo:7:7" ng-click="chooseDate($index+7)">{{date.am?'坐诊':''}}
                       </td>
                     </tr>
                     <tr class="row">
                       <td class="col" style="color: #0a0608">下午</td>
-                      <td class="col {{CurrentArr[$index].isCurrent?'active':''}}"
-                          ng-repeat="date in  dateArr | limitTo:7:7" ng-click="chooseDate($index)">{{date.pm?'坐诊':''}}
+                      <td class="col {{CurrentArr[$index+7].isCurrent?'active':''}}"
+                          ng-repeat="date in  dateArr | limitTo:7:7" ng-click="chooseDate($index+7)">{{date.pm?'坐诊':''}}
                       </td>
                     </tr>
                     </tbody>
@@ -148,6 +146,8 @@
             </div>
 
           </div>
+          <!--这个 div 没什么内容,只是为了撑起底部不能显示的内容-->
+          <div style="height: 50px"></div>
         </ion-content>
       </ion-slide>
 

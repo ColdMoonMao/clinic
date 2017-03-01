@@ -32,7 +32,8 @@ angular.module('app.services')
           method: 'POST',
           url: GlobalConfig.url.api.order.create,
           params: params,
-          responseType: 'json',
+          headers: {'Content-Type':undefined},
+          transformRequest: angular.identity,
           timeout: 30000
         }).then(function(data) {
           deferred.resolve(data);
